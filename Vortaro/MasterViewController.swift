@@ -129,7 +129,8 @@ class MasterViewController: UITableViewController {
         } else {
             object = objects[indexPath.row]
         }
-        cell.textLabel?.text = object.description
+        cell.textLabel?.text = object.eo
+        cell.detailTextLabel?.text = object.en
         return cell
     }
 
