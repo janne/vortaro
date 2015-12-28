@@ -11,7 +11,9 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
+    let searchController = UISearchController(searchResultsController: nil)
     var objects = [Translation]()
+    var filteredObjects = [Translation]()
 
     func readWordList() {
         let path = NSBundle.mainBundle().pathForResource("espdic", ofType: "txt")
@@ -26,12 +28,40 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    func isSearching() -> Bool {
+        return searchController.active && searchController.searchBar.text != ""
+    }
+
+    func filterContentForSearchText(searchText: String, scope: String = "All") {
+        filteredObjects = objects.filter { object in
+            let matchesEo = object.eo.lowercaseString.containsString(searchText.lowercaseString)
+            let matchesEn = object.en.lowercaseString.containsString(searchText.lowercaseString)
+            switch scope {
+            case "English":
+                return matchesEn
+            case "Esperanto":
+                return matchesEo
+            default:
+                return matchesEn || matchesEo
+            }
+        }
+        tableView.reloadData()
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         readWordList()
+
+        searchController.searchResultsUpdater = self
+        searchController.dimsBackgroundDuringPresentation = false
+        definesPresentationContext = true
+        tableView.tableHeaderView = searchController.searchBar
+
+        searchController.searchBar.scopeButtonTitles = ["All", "Esperanto", "English"]
+        searchController.searchBar.delegate = self
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
@@ -62,7 +92,12 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row]
+                var object: Translation
+                if isSearching() {
+                    object = filteredObjects[indexPath.row]
+                } else {
+                    object = objects[indexPath.row]
+                }
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.title = object.eo
@@ -79,16 +114,25 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isSearching() {
+            return filteredObjects.count
+        }
         return objects.count
+
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-
-        let object = objects[indexPath.row]
-        cell.textLabel!.text = object.description
+        let object: Translation
+        if isSearching() {
+            object = filteredObjects[indexPath.row]
+        } else {
+            object = objects[indexPath.row]
+        }
+        cell.textLabel?.text = object.description
         return cell
     }
+
 
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -107,3 +151,16 @@ class MasterViewController: UITableViewController {
 
 }
 
+extension MasterViewController: UISearchResultsUpdating {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
+        let searchBar = searchController.searchBar
+        let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
+        filterContentForSearchText(searchController.searchBar.text!, scope: scope)
+    }
+}
+
+extension MasterViewController: UISearchBarDelegate {
+    func searchBar(searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
+    }
+}
