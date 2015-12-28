@@ -29,6 +29,31 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    func search(searchText: String, scope: String) -> [Translation] {
+        let regex: NSRegularExpression
+        do {
+            regex = try NSRegularExpression(pattern: searchText, options: [.CaseInsensitive, .AnchorsMatchLines])
+        } catch {
+            return []
+        }
+        var filtered = [Translation]()
+        var range = NSMakeRange(0, 0)
+        let matches = regex.matchesInString(espdic as String, options: [], range: NSMakeRange(0, espdic.length))
+        if matches.count > 50000 {
+            return objects
+        }
+        for match in matches {
+            if match.range.location > NSMaxRange(range) {
+                range = espdic.lineRangeForRange(match.range)
+                let words = espdic.substringWithRange(range).componentsSeparatedByString(" : ")
+                if words.count > 1 {
+                    filtered.append(Translation(eo: words[0], en: words[1]))
+                }
+            }
+        }
+        return filtered
+    }
+
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
         /*
         filteredObjects = objects.filter { object in
@@ -45,22 +70,7 @@ class MasterViewController: UITableViewController {
         }
         */
 
-        do {
-            let regex = try NSRegularExpression(pattern: searchText, options: [.CaseInsensitive, .AnchorsMatchLines])
-            filteredObjects = []
-            var range = NSMakeRange(0, 0)
-            for match in regex.matchesInString(espdic as String, options: [], range: NSMakeRange(0, espdic.length)) {
-                if match.range.location > NSMaxRange(range) {
-                    range = espdic.lineRangeForRange(match.range)
-                    let words = espdic.substringWithRange(range).componentsSeparatedByString(" : ")
-                    if words.count > 1 {
-                        filteredObjects.append(Translation(eo: words[0], en: words[1]))
-                    }
-                }
-            }
-        } catch {
-            filteredObjects = []
-        }
+        filteredObjects = search(searchText, scope: scope)
 
         tableView.reloadData()
     }
