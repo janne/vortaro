@@ -14,11 +14,12 @@ class MasterViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var objects = [Translation]()
     var filteredObjects = [Translation]()
+    var espdic: NSString = ""
 
     func readWordList() {
         let path = NSBundle.mainBundle().pathForResource("espdic", ofType: "txt")
-        let dict = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
-        let lines = dict.componentsSeparatedByString("\n")
+        espdic = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        let lines = espdic.componentsSeparatedByString("\n")
         
         for(var i = 0; i < lines.count; i++) {
             let words = lines[i].componentsSeparatedByString(":")
@@ -29,6 +30,7 @@ class MasterViewController: UITableViewController {
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
+        /*
         filteredObjects = objects.filter { object in
             switch scope {
             case "Esperanto":
@@ -40,6 +42,24 @@ class MasterViewController: UITableViewController {
             default:
                 return true
             }
+        }
+        */
+
+        do {
+            let regex = try NSRegularExpression(pattern: searchText, options: [.CaseInsensitive, .AnchorsMatchLines])
+            filteredObjects = []
+            var range = NSMakeRange(0, 0)
+            for match in regex.matchesInString(espdic as String, options: [], range: NSMakeRange(0, espdic.length)) {
+                if match.range.location > NSMaxRange(range) {
+                    range = espdic.lineRangeForRange(match.range)
+                    let words = espdic.substringWithRange(range).componentsSeparatedByString(" : ")
+                    if words.count > 1 {
+                        filteredObjects.append(Translation(eo: words[0], en: words[1]))
+                    }
+                }
+            }
+        } catch {
+            filteredObjects = []
         }
 
         tableView.reloadData()
