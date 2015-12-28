@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB78A2CD1C3131BC009545DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2CC1C3131BC009545DE /* AppDelegate.swift */; };
+		FB78A2CF1C3131BC009545DE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2CE1C3131BC009545DE /* MasterViewController.swift */; };
+		FB78A2D11C3131BC009545DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2D01C3131BC009545DE /* DetailViewController.swift */; };
+		FB78A2D41C3131BC009545DE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78A2D21C3131BC009545DE /* Main.storyboard */; };
+		FB78A2D61C3131BC009545DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB78A2D51C3131BC009545DE /* Assets.xcassets */; };
+		FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */; };
+		FB78A2E41C3131BD009545DE /* VortaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2E31C3131BD009545DE /* VortaroTests.swift */; };
+		FB78A2EF1C3131BD009545DE /* VortaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB78A2E01C3131BD009545DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB78A2C11C3131BC009545DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB78A2C81C3131BC009545DE;
+			remoteInfo = Vortaro;
+		};
+		FB78A2EB1C3131BD009545DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB78A2C11C3131BC009545DE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB78A2C81C3131BC009545DE;
+			remoteInfo = Vortaro;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB78A2C91C3131BC009545DE /* Vortaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vortaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB78A2CC1C3131BC009545DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB78A2CE1C3131BC009545DE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		FB78A2D01C3131BC009545DE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FB78A2D31C3131BC009545DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB78A2D51C3131BC009545DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB78A2D81C3131BC009545DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB78A2DA1C3131BC009545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB78A2DF1C3131BD009545DE /* VortaroTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VortaroTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB78A2E31C3131BD009545DE /* VortaroTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroTests.swift; sourceTree = "<group>"; };
+		FB78A2E51C3131BD009545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB78A2EA1C3131BD009545DE /* VortaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VortaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroUITests.swift; sourceTree = "<group>"; };
+		FB78A2F01C3131BD009545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB78A2C61C3131BC009545DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2DC1C3131BD009545DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2E71C3131BD009545DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB78A2C01C3131BC009545DE = {
+			isa = PBXGroup;
+			children = (
+				FB78A2CB1C3131BC009545DE /* Vortaro */,
+				FB78A2E21C3131BD009545DE /* VortaroTests */,
+				FB78A2ED1C3131BD009545DE /* VortaroUITests */,
+				FB78A2CA1C3131BC009545DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB78A2CA1C3131BC009545DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB78A2C91C3131BC009545DE /* Vortaro.app */,
+				FB78A2DF1C3131BD009545DE /* VortaroTests.xctest */,
+				FB78A2EA1C3131BD009545DE /* VortaroUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB78A2CB1C3131BC009545DE /* Vortaro */ = {
+			isa = PBXGroup;
+			children = (
+				FB78A2CC1C3131BC009545DE /* AppDelegate.swift */,
+				FB78A2CE1C3131BC009545DE /* MasterViewController.swift */,
+				FB78A2D01C3131BC009545DE /* DetailViewController.swift */,
+				FB78A2D21C3131BC009545DE /* Main.storyboard */,
+				FB78A2D51C3131BC009545DE /* Assets.xcassets */,
+				FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */,
+				FB78A2DA1C3131BC009545DE /* Info.plist */,
+			);
+			path = Vortaro;
+			sourceTree = "<group>";
+		};
+		FB78A2E21C3131BD009545DE /* VortaroTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB78A2E31C3131BD009545DE /* VortaroTests.swift */,
+				FB78A2E51C3131BD009545DE /* Info.plist */,
+			);
+			path = VortaroTests;
+			sourceTree = "<group>";
+		};
+		FB78A2ED1C3131BD009545DE /* VortaroUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */,
+				FB78A2F01C3131BD009545DE /* Info.plist */,
+			);
+			path = VortaroUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB78A2C81C3131BC009545DE /* Vortaro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB78A2F31C3131BD009545DE /* Build configuration list for PBXNativeTarget "Vortaro" */;
+			buildPhases = (
+				FB78A2C51C3131BC009545DE /* Sources */,
+				FB78A2C61C3131BC009545DE /* Frameworks */,
+				FB78A2C71C3131BC009545DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Vortaro;
+			productName = Vortaro;
+			productReference = FB78A2C91C3131BC009545DE /* Vortaro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB78A2DE1C3131BD009545DE /* VortaroTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB78A2F61C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroTests" */;
+			buildPhases = (
+				FB78A2DB1C3131BD009545DE /* Sources */,
+				FB78A2DC1C3131BD009545DE /* Frameworks */,
+				FB78A2DD1C3131BD009545DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB78A2E11C3131BD009545DE /* PBXTargetDependency */,
+			);
+			name = VortaroTests;
+			productName = VortaroTests;
+			productReference = FB78A2DF1C3131BD009545DE /* VortaroTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB78A2E91C3131BD009545DE /* VortaroUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB78A2F91C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroUITests" */;
+			buildPhases = (
+				FB78A2E61C3131BD009545DE /* Sources */,
+				FB78A2E71C3131BD009545DE /* Frameworks */,
+				FB78A2E81C3131BD009545DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB78A2EC1C3131BD009545DE /* PBXTargetDependency */,
+			);
+			name = VortaroUITests;
+			productName = VortaroUITests;
+			productReference = FB78A2EA1C3131BD009545DE /* VortaroUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB78A2C11C3131BC009545DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Visuell Data";
+				TargetAttributes = {
+					FB78A2C81C3131BC009545DE = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					FB78A2DE1C3131BD009545DE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FB78A2C81C3131BC009545DE;
+					};
+					FB78A2E91C3131BD009545DE = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FB78A2C81C3131BC009545DE;
+					};
+				};
+			};
+			buildConfigurationList = FB78A2C41C3131BC009545DE /* Build configuration list for PBXProject "Vortaro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB78A2C01C3131BC009545DE;
+			productRefGroup = FB78A2CA1C3131BC009545DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB78A2C81C3131BC009545DE /* Vortaro */,
+				FB78A2DE1C3131BD009545DE /* VortaroTests */,
+				FB78A2E91C3131BD009545DE /* VortaroUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB78A2C71C3131BC009545DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */,
+				FB78A2D61C3131BC009545DE /* Assets.xcassets in Resources */,
+				FB78A2D41C3131BC009545DE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2DD1C3131BD009545DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2E81C3131BD009545DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB78A2C51C3131BC009545DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB78A2D11C3131BC009545DE /* DetailViewController.swift in Sources */,
+				FB78A2CF1C3131BC009545DE /* MasterViewController.swift in Sources */,
+				FB78A2CD1C3131BC009545DE /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2DB1C3131BD009545DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB78A2E41C3131BD009545DE /* VortaroTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB78A2E61C3131BD009545DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB78A2EF1C3131BD009545DE /* VortaroUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB78A2E11C3131BD009545DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB78A2C81C3131BC009545DE /* Vortaro */;
+			targetProxy = FB78A2E01C3131BD009545DE /* PBXContainerItemProxy */;
+		};
+		FB78A2EC1C3131BD009545DE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB78A2C81C3131BC009545DE /* Vortaro */;
+			targetProxy = FB78A2EB1C3131BD009545DE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB78A2D21C3131BC009545DE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB78A2D31C3131BC009545DE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB78A2D81C3131BC009545DE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB78A2F11C3131BD009545DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB78A2F21C3131BD009545DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB78A2F41C3131BD009545DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vortaro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.Vortaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB78A2F51C3131BD009545DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Vortaro/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.Vortaro;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB78A2F71C3131BD009545DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VortaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.VortaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vortaro.app/Vortaro";
+			};
+			name = Debug;
+		};
+		FB78A2F81C3131BD009545DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VortaroTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.VortaroTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Vortaro.app/Vortaro";
+			};
+			name = Release;
+		};
+		FB78A2FA1C3131BD009545DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VortaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.VortaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Vortaro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FB78A2FB1C3131BD009545DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VortaroUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = se.visuelldata.VortaroUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Vortaro;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB78A2C41C3131BC009545DE /* Build configuration list for PBXProject "Vortaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB78A2F11C3131BD009545DE /* Debug */,
+				FB78A2F21C3131BD009545DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB78A2F31C3131BD009545DE /* Build configuration list for PBXNativeTarget "Vortaro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB78A2F41C3131BD009545DE /* Debug */,
+				FB78A2F51C3131BD009545DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB78A2F61C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB78A2F71C3131BD009545DE /* Debug */,
+				FB78A2F81C3131BD009545DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB78A2F91C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB78A2FA1C3131BD009545DE /* Debug */,
+				FB78A2FB1C3131BD009545DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB78A2C11C3131BC009545DE /* Project object */;
+}
