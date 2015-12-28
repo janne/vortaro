@@ -32,21 +32,6 @@ class MasterViewController: UITableViewController {
         return searchController.active && searchController.searchBar.text != ""
     }
 
-    func matchesText(pattern: String, _ object: Translation) -> Bool {
-        do {
-            let regex = try NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
-            for word in [object.eo] + object.ens() {
-                let nsString = word as NSString
-                if regex.matchesInString(word, options: [], range:NSMakeRange(0, nsString.length)).count > 0 {
-                    return true
-                }
-            }
-        } catch {
-            return false
-        }
-        return false
-    }
-
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
         do {
             filteredObjects = objects.filter { object in
@@ -56,7 +41,7 @@ class MasterViewController: UITableViewController {
                 case "English":
                     return object.en.lowercaseString.containsString(searchText.lowercaseString)
                 case "Regex":
-                    return matchesText(searchText, object)
+                    return object.eo.rangeOfString(searchText, options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) != nil
                 default:
                     return true
                 }
