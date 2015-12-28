@@ -20,4 +20,8 @@ class Translation {
     var description: String {
         return "\(eo): \(en)"
     }
+
+    func ens() -> [String] {
+        return en.componentsSeparatedByString(",").map { $0.trim() }
+    }
 }

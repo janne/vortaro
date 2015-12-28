@@ -32,19 +32,37 @@ class MasterViewController: UITableViewController {
         return searchController.active && searchController.searchBar.text != ""
     }
 
-    func filterContentForSearchText(searchText: String, scope: String = "All") {
-        filteredObjects = objects.filter { object in
-            let matchesEo = object.eo.lowercaseString.containsString(searchText.lowercaseString)
-            let matchesEn = object.en.lowercaseString.containsString(searchText.lowercaseString)
-            switch scope {
-            case "English":
-                return matchesEn
-            case "Esperanto":
-                return matchesEo
-            default:
-                return matchesEn || matchesEo
+    func matchesText(pattern: String, _ object: Translation) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: pattern, options: .CaseInsensitive)
+            for word in [object.eo] + object.ens() {
+                let nsString = word as NSString
+                if regex.matchesInString(word, options: [], range:NSMakeRange(0, nsString.length)).count > 0 {
+                    return true
+                }
+            }
+        } catch {
+            return false
+        }
+        return false
+    }
+
+    func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
+        do {
+            filteredObjects = objects.filter { object in
+                switch scope {
+                case "Esperanto":
+                    return object.eo.lowercaseString.containsString(searchText.lowercaseString)
+                case "English":
+                    return object.en.lowercaseString.containsString(searchText.lowercaseString)
+                case "Regex":
+                    return matchesText(searchText, object)
+                default:
+                    return true
+                }
             }
         }
+
         tableView.reloadData()
     }
 
@@ -60,7 +78,7 @@ class MasterViewController: UITableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
-        searchController.searchBar.scopeButtonTitles = ["All", "Esperanto", "English"]
+        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Regex"]
         searchController.searchBar.delegate = self
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
