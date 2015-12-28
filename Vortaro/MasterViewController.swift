@@ -28,23 +28,17 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    func isSearching() -> Bool {
-        return searchController.active && searchController.searchBar.text != ""
-    }
-
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
-        do {
-            filteredObjects = objects.filter { object in
-                switch scope {
-                case "Esperanto":
-                    return object.eo.lowercaseString.containsString(searchText.lowercaseString)
-                case "English":
-                    return object.en.lowercaseString.containsString(searchText.lowercaseString)
-                case "Regex":
-                    return object.eo.rangeOfString(searchText, options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) != nil
-                default:
-                    return true
-                }
+        filteredObjects = objects.filter { object in
+            switch scope {
+            case "Esperanto":
+                return object.eo.lowercaseString.containsString(searchText.lowercaseString)
+            case "English":
+                return object.en.lowercaseString.containsString(searchText.lowercaseString)
+            case "Regex":
+                return object.eo.rangeOfString(searchText, options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) != nil
+            default:
+                return true
             }
         }
 
@@ -95,12 +89,7 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                var object: Translation
-                if isSearching() {
-                    object = filteredObjects[indexPath.row]
-                } else {
-                    object = objects[indexPath.row]
-                }
+                let object = translations()[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
                 controller.title = object.eo
@@ -116,22 +105,20 @@ class MasterViewController: UITableViewController {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isSearching() {
-            return filteredObjects.count
+    func translations() -> [Translation] {
+        if searchController.active && searchController.searchBar.text != "" {
+            return filteredObjects
         }
-        return objects.count
+        return objects
+    }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return translations().count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let object: Translation
-        if isSearching() {
-            object = filteredObjects[indexPath.row]
-        } else {
-            object = objects[indexPath.row]
-        }
+        let object = translations()[indexPath.row]
         cell.textLabel?.text = object.eo
         cell.detailTextLabel?.text = object.en
         return cell
