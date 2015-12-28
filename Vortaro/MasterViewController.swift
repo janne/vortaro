@@ -21,7 +21,7 @@ class MasterViewController: UITableViewController {
         for(var i = 0; i < lines.count; i++) {
             let words = lines[i].componentsSeparatedByString(":")
             if words.count > 1 {
-                objects.append(Translation(eo: words[0], en: words[1]))
+                objects.append(Translation(eo: words[0].trim(), en: words[1].trim()))
             }
         }
     }
