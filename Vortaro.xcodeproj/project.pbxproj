@@ -15,6 +15,7 @@
 		FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */; };
 		FB78A2E41C3131BD009545DE /* VortaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2E31C3131BD009545DE /* VortaroTests.swift */; };
 		FB78A2EF1C3131BD009545DE /* VortaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */; };
+		FBC322F81C313AF500A4BB11 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC322F71C313AF500A4BB11 /* Translation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FB78A2EA1C3131BD009545DE /* VortaroUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VortaroUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroUITests.swift; sourceTree = "<group>"; };
 		FB78A2F01C3131BD009545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBC322F71C313AF500A4BB11 /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				FB78A2D51C3131BC009545DE /* Assets.xcassets */,
 				FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */,
 				FB78A2DA1C3131BC009545DE /* Info.plist */,
+				FBC322F71C313AF500A4BB11 /* Translation.swift */,
 			);
 			path = Vortaro;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				FB78A2D11C3131BC009545DE /* DetailViewController.swift in Sources */,
 				FB78A2CF1C3131BC009545DE /* MasterViewController.swift in Sources */,
 				FB78A2CD1C3131BC009545DE /* AppDelegate.swift in Sources */,
+				FBC322F81C313AF500A4BB11 /* Translation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +490,7 @@
 				FB78A2F51C3131BD009545DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB78A2F61C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +499,7 @@
 				FB78A2F81C3131BD009545DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB78A2F91C3131BD009545DE /* Build configuration list for PBXNativeTarget "VortaroUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +508,7 @@
 				FB78A2FB1C3131BD009545DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
