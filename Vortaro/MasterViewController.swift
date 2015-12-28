@@ -20,7 +20,7 @@ class MasterViewController: UITableViewController {
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
         for(var i = 0; i < 50000; i++) {
-            objects.insert(Translation(eo: "Bar \(i)", en: "Foo \(i)"), atIndex: 0)
+            objects.append(Translation(eo: "Saluton \(i)", en: "Hello \(i)"))
         }
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
@@ -55,6 +55,7 @@ class MasterViewController: UITableViewController {
                 let object = objects[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = object
+                controller.title = object.eo
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
