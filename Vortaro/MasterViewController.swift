@@ -13,15 +13,25 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     var objects = [Translation]()
 
+    func readWordList() {
+        let path = NSBundle.mainBundle().pathForResource("espdic", ofType: "txt")
+        let dict = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        let lines = dict.componentsSeparatedByString("\n")
+        
+        for(var i = 0; i < lines.count; i++) {
+            let words = lines[i].componentsSeparatedByString(":")
+            if words.count > 1 {
+                objects.append(Translation(eo: words[0], en: words[1]))
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationItem.leftBarButtonItem = self.editButtonItem()
 
-        for(var i = 0; i < 50000; i++) {
-            objects.append(Translation(eo: "Saluton \(i)", en: "Hello \(i)"))
-        }
+        readWordList()
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
         self.navigationItem.rightBarButtonItem = addButton
