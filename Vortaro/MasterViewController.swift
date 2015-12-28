@@ -14,17 +14,22 @@ class MasterViewController: UITableViewController {
     let searchController = UISearchController(searchResultsController: nil)
     var objects = [Translation]()
     var filteredObjects = [Translation]()
-    var espdic: NSString = ""
+    var eoWords: NSString = ""
+    var dictEoEn = [String: String]()
 
     func readWordList() {
         let path = NSBundle.mainBundle().pathForResource("espdic", ofType: "txt")
-        espdic = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        let espdic = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
         let lines = espdic.componentsSeparatedByString("\n")
         
         for(var i = 0; i < lines.count; i++) {
             let words = lines[i].componentsSeparatedByString(":")
             if words.count > 1 {
-                objects.append(Translation(eo: words[0].trim(), en: words[1].trim()))
+                let eo = words[0].trim()
+                let en = words[1].trim()
+                eoWords = eoWords.stringByAppendingString("\(eo)\n")
+                dictEoEn[eo] = en
+                objects.append(Translation(eo: eo, en: en))
             }
         }
     }
@@ -38,16 +43,13 @@ class MasterViewController: UITableViewController {
         }
         var filtered = [Translation]()
         var range = NSMakeRange(0, 0)
-        let matches = regex.matchesInString(espdic as String, options: [], range: NSMakeRange(0, espdic.length))
-        if matches.count > 50000 {
-            return objects
-        }
+        let matches = regex.matchesInString(eoWords as String, options: [], range: NSMakeRange(0, eoWords.length))
         for match in matches {
             if match.range.location > NSMaxRange(range) {
-                range = espdic.lineRangeForRange(match.range)
-                let words = espdic.substringWithRange(range).componentsSeparatedByString(" : ")
-                if words.count > 1 {
-                    filtered.append(Translation(eo: words[0], en: words[1]))
+                range = eoWords.lineRangeForRange(match.range)
+                let eo = eoWords.substringWithRange(range).trim()
+                if let en = dictEoEn[eo] {
+                    filtered.append(Translation(eo: eo, en: en))
                 }
             }
         }
@@ -70,7 +72,11 @@ class MasterViewController: UITableViewController {
         }
         */
 
-        filteredObjects = search(searchText, scope: scope)
+        if (searchText as NSString).length > 1 {
+            filteredObjects = search(searchText, scope: scope)
+        } else {
+            filteredObjects = objects
+        }
 
         tableView.reloadData()
     }
