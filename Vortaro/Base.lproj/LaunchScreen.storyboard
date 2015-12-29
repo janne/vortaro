@@ -17,22 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="oe3-27-qly">
-                                <rect key="frame" x="272" y="289" width="57" height="21"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vortaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCd-Pj-UIU" propertyAccessControl="none">
-                                        <rect key="frame" x="0.0" y="0.0" width="57" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vortaro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCd-Pj-UIU" propertyAccessControl="none">
+                                <rect key="frame" x="242" y="279" width="116" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Based on Espdic from http://www.denisowski.org/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAO-8V-JEn" propertyAccessControl="none">
+                                <rect key="frame" x="176" y="514" width="248" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Copyright © Jan Andersson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ges-V8-58m" propertyAccessControl="none">
+                                <rect key="frame" x="230" y="543" width="140" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oe3-27-qly" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="77f-Ap-h5m"/>
-                            <constraint firstItem="oe3-27-qly" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Eqw-t0-JMt"/>
+                            <constraint firstItem="VAO-8V-JEn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8ds-aZ-mcw"/>
+                            <constraint firstItem="Ges-V8-58m" firstAttribute="top" secondItem="VAO-8V-JEn" secondAttribute="bottom" constant="8" id="HqM-zY-qBY"/>
+                            <constraint firstItem="NCd-Pj-UIU" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="QNt-1g-yLZ"/>
+                            <constraint firstItem="NCd-Pj-UIU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="dbY-BL-AlU"/>
+                            <constraint firstItem="Ges-V8-58m" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mTE-Vx-DyD"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="Ges-V8-58m" secondAttribute="bottom" constant="20" id="vjA-B2-vJh"/>
                         </constraints>
                     </view>
                 </viewController>
