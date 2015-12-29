@@ -29,6 +29,8 @@ class DetailViewController: UIViewController {
                 for word in detail.ens() {
                     lbl = lbl + "<p>\(word)</p>"
                 }
+                lbl = lbl + "<p><a href='https://eo.m.wikipedia.org/wiki/\(detail.eo)'>Vikipedio</a></p>"
+                lbl = lbl + "<p><a href='https://eo.m.wiktionary.org/wiki/\(detail.eo)'>Vikivortaro</a></p>"
                 lbl = lbl + "</body>"
                 view.loadHTMLString(lbl, baseURL: nil)
             }
