@@ -17,24 +17,28 @@ class MasterViewController: UITableViewController {
     var eoWords: NSString = ""
     var dictEoEn = [String: String]()
 
+    func readFile(file: String, ofType type: String = "txt") -> String {
+        let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
+        return try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+    }
+
     func readWordList() {
-        let path = NSBundle.mainBundle().pathForResource("espdic", ofType: "txt")
-        let espdic = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
-        let lines = espdic.componentsSeparatedByString("\n")
-        
-        for(var i = 0; i < lines.count; i++) {
-            let words = lines[i].componentsSeparatedByString(":")
+
+        let lines = readFile("espdic").componentsSeparatedByString("\n")
+        eoWords = readFile("esp")
+
+        for line in lines {
+            let words = line.componentsSeparatedByString(":")
             if words.count > 1 {
                 let eo = words[0].trim()
                 let en = words[1].trim()
-                eoWords = eoWords.stringByAppendingString("\(eo)\n")
                 dictEoEn[eo] = en
                 objects.append(Translation(eo: eo, en: en))
             }
         }
     }
 
-    func search(searchText: String, scope: String) -> [Translation] {
+    func searchEo(searchText: String) -> [Translation] {
         let regex: NSRegularExpression
         do {
             regex = try NSRegularExpression(pattern: searchText, options: [.CaseInsensitive, .AnchorsMatchLines])
@@ -57,27 +61,15 @@ class MasterViewController: UITableViewController {
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
-        /*
-        filteredObjects = objects.filter { object in
-            switch scope {
-            case "Esperanto":
-                return object.eo.lowercaseString.containsString(searchText.lowercaseString)
-            case "English":
-                return object.en.lowercaseString.containsString(searchText.lowercaseString)
-            case "Regex":
-                return object.eo.rangeOfString(searchText, options: [.RegularExpressionSearch, .CaseInsensitiveSearch]) != nil
-            default:
-                return true
+        if (searchText as NSString).length <= 1 {
+            filteredObjects = objects
+        } else if scope == "Esperanto" {
+            filteredObjects = searchEo(searchText)
+        } else {
+            filteredObjects = objects.filter { object in
+                object.en.lowercaseString.containsString(searchText.lowercaseString)
             }
         }
-        */
-
-        if (searchText as NSString).length > 1 {
-            filteredObjects = search(searchText, scope: scope)
-        } else {
-            filteredObjects = objects
-        }
-
         tableView.reloadData()
     }
 
@@ -90,7 +82,7 @@ class MasterViewController: UITableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
-        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Regex"]
+        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English"]
         searchController.searchBar.delegate = self
 
         if let split = self.splitViewController {
@@ -136,7 +128,7 @@ class MasterViewController: UITableViewController {
     }
 
     func translations() -> [Translation] {
-        if searchController.active && searchController.searchBar.text != "" {
+        if searchController.active && (searchController.searchBar.text! as NSString).length > 1 {
             return filteredObjects
         }
         return objects

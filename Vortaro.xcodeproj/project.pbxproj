@@ -18,7 +18,7 @@
 		FBC322F81C313AF500A4BB11 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC322F71C313AF500A4BB11 /* Translation.swift */; };
 		FBC322FA1C3142EC00A4BB11 /* espdic.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBC322F91C3142EC00A4BB11 /* espdic.txt */; };
 		FBC322FC1C314A6900A4BB11 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC322FB1C314A6900A4BB11 /* Utils.swift */; };
-		FBC322FE1C32850E00A4BB11 /* questionmark.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FBC322FD1C32850E00A4BB11 /* questionmark.jpg */; };
+		FBC323001C328FD300A4BB11 /* esp.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBC322FF1C328FD300A4BB11 /* esp.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		FBC322F71C313AF500A4BB11 /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
 		FBC322F91C3142EC00A4BB11 /* espdic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = espdic.txt; sourceTree = "<group>"; };
 		FBC322FB1C314A6900A4BB11 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		FBC322FD1C32850E00A4BB11 /* questionmark.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = questionmark.jpg; sourceTree = "<group>"; };
+		FBC322FF1C328FD300A4BB11 /* esp.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = esp.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,11 +110,11 @@
 				FB78A2CC1C3131BC009545DE /* AppDelegate.swift */,
 				FB78A2CE1C3131BC009545DE /* MasterViewController.swift */,
 				FBC322F91C3142EC00A4BB11 /* espdic.txt */,
+				FBC322FF1C328FD300A4BB11 /* esp.txt */,
 				FB78A2D01C3131BC009545DE /* DetailViewController.swift */,
 				FB78A2D21C3131BC009545DE /* Main.storyboard */,
 				FB78A2D51C3131BC009545DE /* Assets.xcassets */,
 				FB78A2D71C3131BC009545DE /* LaunchScreen.storyboard */,
-				FBC322FD1C32850E00A4BB11 /* questionmark.jpg */,
 				FB78A2DA1C3131BC009545DE /* Info.plist */,
 				FBC322F71C313AF500A4BB11 /* Translation.swift */,
 				FBC322FB1C314A6900A4BB11 /* Utils.swift */,
@@ -245,9 +245,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBC322FA1C3142EC00A4BB11 /* espdic.txt in Resources */,
+				FBC323001C328FD300A4BB11 /* esp.txt in Resources */,
 				FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */,
 				FB78A2D61C3131BC009545DE /* Assets.xcassets in Resources */,
-				FBC322FE1C32850E00A4BB11 /* questionmark.jpg in Resources */,
 				FB78A2D41C3131BC009545DE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
