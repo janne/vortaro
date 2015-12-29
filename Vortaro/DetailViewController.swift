@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var webView: UIWebView!
 
     var detailItem: Translation? {
         didSet {
@@ -22,12 +22,15 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.textView {
-                var lbl = "Esperanto:\n  \(detail.eo)\n\nEnglish:\n"
+            if let view = self.webView {
+                var lbl = "" +
+                "<body style=\"font-family: '-apple-system','HelveticaNeue'; font-size:18px;\">" +
+                "<h3>Esperanto</h3><p>\(detail.eo)</p><h3>English</h3>"
                 for word in detail.ens() {
-                    lbl = lbl + "  \(word)\n"
+                    lbl = lbl + "<p>\(word)</p>"
                 }
-                label.text = lbl
+                lbl = lbl + "</body>"
+                view.loadHTMLString(lbl, baseURL: nil)
             }
         }
     }

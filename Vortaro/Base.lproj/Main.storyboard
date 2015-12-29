@@ -33,25 +33,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RyN-7Y-WzQ">
-                                <rect key="frame" x="20" y="72" width="560" height="508"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wmA-bE-7Ig">
+                                <rect key="frame" x="10" y="0.0" width="590" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <attributedString key="attributedText"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RyN-7Y-WzQ" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="8" id="7t2-pN-4Pl"/>
-                            <constraint firstItem="RyN-7Y-WzQ" firstAttribute="trailing" secondItem="svH-Pt-448" secondAttribute="trailingMargin" id="KHe-2F-gbP"/>
-                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="RyN-7Y-WzQ" secondAttribute="bottom" constant="20" id="hKt-hK-TOE"/>
-                            <constraint firstItem="RyN-7Y-WzQ" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" id="iF1-wB-EIl"/>
+                            <constraint firstItem="wmA-bE-7Ig" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="JvG-pS-vPh"/>
+                            <constraint firstItem="wmA-bE-7Ig" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-10" id="KBD-fJ-Gho"/>
+                            <constraint firstItem="wmA-bE-7Ig" firstAttribute="bottom" secondItem="GAO-Cl-Wes" secondAttribute="top" id="TXg-gI-xJG"/>
+                            <constraint firstAttribute="trailing" secondItem="wmA-bE-7Ig" secondAttribute="trailing" id="x3D-bX-kqN"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
                     <connections>
-                        <outlet property="textView" destination="RyN-7Y-WzQ" id="FJn-1Z-v5W"/>
+                        <outlet property="webView" destination="wmA-bE-7Ig" id="nAt-79-3fJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
