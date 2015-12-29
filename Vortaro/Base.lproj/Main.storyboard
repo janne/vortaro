@@ -115,7 +115,13 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Vortaro" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Vortaro" id="Zdf-7t-Un8">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="RY3-ck-Ucw">
+                            <connections>
+                                <action selector="About:" destination="7bK-jq-Zjz" id="NFG-QN-mJc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
