@@ -10,7 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var textView: UITextView!
 
     var detailItem: Translation? {
         didSet {
@@ -22,8 +22,13 @@ class DetailViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.en
+            if let label = self.textView {
+                let words = detail.en.componentsSeparatedByString(",").map { $0.trim() }
+                var lbl = "Esperanto:\n  \(detail.eo)\n\nEnglish:\n"
+                for word in words {
+                    lbl = lbl + "  \(word)\n"
+                }
+                label.text = lbl
             }
         }
     }
