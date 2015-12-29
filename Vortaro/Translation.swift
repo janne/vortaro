@@ -18,6 +18,11 @@ class Translation {
     }
 
     func ens() -> [String] {
-        return en.componentsSeparatedByString(",").map { $0.trim() }
+
+        if en[en.startIndex] == "(" {
+            return [en]
+        } else {
+            return en.componentsSeparatedByString(",").map { $0.trim() }
+        }
     }
 }
