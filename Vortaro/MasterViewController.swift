@@ -23,19 +23,18 @@ class MasterViewController: UITableViewController {
     }
 
     func readWordList() {
-
-        let lines = readFile("espdic").componentsSeparatedByString("\n")
-        eoWords = readFile("esp")
-
-        for line in lines {
+        var eoWordsArr = [String]()
+        for line in readFile("espdic").componentsSeparatedByString("\n") {
             let words = line.componentsSeparatedByString(":")
             if words.count > 1 {
                 let eo = words[0].trim()
                 let en = words[1].trim()
                 dictEoEn[eo] = en
+                eoWordsArr.append(eo)
                 objects.append(Translation(eo: eo, en: en))
             }
         }
+        eoWords = eoWordsArr.joinWithSeparator("\n")
     }
 
     func searchEo(searchText: String) -> [Translation] {
