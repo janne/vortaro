@@ -15,7 +15,9 @@ class MasterViewController: UITableViewController {
     var objects = [Translation]()
     var filteredObjects = [Translation]()
     var eoWords: NSString = ""
+    var enWords: NSString = ""
     var dictEoEn = [String: String]()
+    var dictEnEo = [String: [String]]()
 
     func readFile(file: String, ofType type: String = "txt") -> String {
         let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
@@ -23,36 +25,73 @@ class MasterViewController: UITableViewController {
     }
 
     func readWordList() {
-        var eoWordsArr = [String]()
+        var eoWordsSet = Set<String>()
+        var enWordsSet = Set<String>()
         for line in readFile("espdic").componentsSeparatedByString("\n") {
             let words = line.componentsSeparatedByString(":")
             if words.count > 1 {
                 let eo = words[0].trim()
                 let en = words[1].trim()
+                let translation = Translation(eo: eo, en: en)
                 dictEoEn[eo] = en
-                eoWordsArr.append(eo)
-                objects.append(Translation(eo: eo, en: en))
+                for word in translation.ens() {
+                    var eos = dictEnEo[word] ?? []
+                    if !eos.contains(eo) {
+                        eos.append(eo)
+                    }
+                    dictEnEo[word] = eos
+                    enWordsSet.insert(word)
+                }
+                eoWordsSet.insert(eo)
+                objects.append(translation)
             }
         }
-        eoWords = eoWordsArr.joinWithSeparator("\n")
+        eoWords = eoWordsSet.joinWithSeparator("\n")
+        enWords = enWordsSet.joinWithSeparator("\n")
+    }
+
+    func buildRegexp(pattern: String) -> NSRegularExpression? {
+        do {
+            return try NSRegularExpression(pattern: pattern, options: [.CaseInsensitive, .AnchorsMatchLines])
+        } catch {
+            return nil
+        }
+    }
+
+    func searchEn(searchText: String) -> [Translation] {
+        var filtered = [Translation]()
+        if let regex = buildRegexp(searchText) {
+            var range = NSMakeRange(0, 0)
+            let matches = regex.matchesInString(enWords as String, options: [], range: NSMakeRange(0, enWords.length))
+            for match in matches {
+                if match.range.location > NSMaxRange(range) {
+                    range = enWords.lineRangeForRange(match.range)
+                    let en = enWords.substringWithRange(range).trim()
+                    if let eos = dictEnEo[en] {
+                        for eo in eos {
+                            if let n = dictEoEn[eo] {
+                                filtered.append(Translation(eo: eo, en: n))
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        return filtered
     }
 
     func searchEo(searchText: String) -> [Translation] {
-        let regex: NSRegularExpression
-        do {
-            regex = try NSRegularExpression(pattern: searchText, options: [.CaseInsensitive, .AnchorsMatchLines])
-        } catch {
-            return []
-        }
         var filtered = [Translation]()
-        var range = NSMakeRange(0, 0)
-        let matches = regex.matchesInString(eoWords as String, options: [], range: NSMakeRange(0, eoWords.length))
-        for match in matches {
-            if match.range.location > NSMaxRange(range) {
-                range = eoWords.lineRangeForRange(match.range)
-                let eo = eoWords.substringWithRange(range).trim()
-                if let en = dictEoEn[eo] {
-                    filtered.append(Translation(eo: eo, en: en))
+        if let regex = buildRegexp(searchText) {
+            var range = NSMakeRange(0, 0)
+            let matches = regex.matchesInString(eoWords as String, options: [], range: NSMakeRange(0, eoWords.length))
+            for match in matches {
+                if match.range.location > NSMaxRange(range) {
+                    range = eoWords.lineRangeForRange(match.range)
+                    let eo = eoWords.substringWithRange(range).trim()
+                    if let en = dictEoEn[eo] {
+                        filtered.append(Translation(eo: eo, en: en))
+                    }
                 }
             }
         }
@@ -65,9 +104,7 @@ class MasterViewController: UITableViewController {
         } else if scope == "Esperanto" {
             filteredObjects = searchEo(searchText)
         } else {
-            filteredObjects = objects.filter { object in
-                object.en.lowercaseString.containsString(searchText.lowercaseString)
-            }
+            filteredObjects = searchEn(searchText)
         }
         tableView.reloadData()
     }
