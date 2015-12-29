@@ -23,9 +23,8 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
             if let label = self.textView {
-                let words = detail.en.componentsSeparatedByString(",").map { $0.trim() }
                 var lbl = "Esperanto:\n  \(detail.eo)\n\nEnglish:\n"
-                for word in words {
+                for word in detail.ens() {
                     lbl = lbl + "  \(word)\n"
                 }
                 label.text = lbl
