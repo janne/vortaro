@@ -25,7 +25,7 @@ class MasterViewController: UITableViewController {
     }
 
     func readWordList() {
-        var eoWordsSet = Set<String>()
+        var eoWordsArr = [String]()
         var enWordsSet = Set<String>()
         for line in readFile("espdic").componentsSeparatedByString("\n") {
             let words = line.componentsSeparatedByString(":")
@@ -42,11 +42,11 @@ class MasterViewController: UITableViewController {
                     dictEnEo[word] = eos
                     enWordsSet.insert(word)
                 }
-                eoWordsSet.insert(eo)
+                eoWordsArr.append(eo)
                 objects.append(translation)
             }
         }
-        eoWords = eoWordsSet.joinWithSeparator("\n")
+        eoWords = eoWordsArr.joinWithSeparator("\n")
         enWords = enWordsSet.joinWithSeparator("\n")
     }
 
