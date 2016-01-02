@@ -70,18 +70,23 @@ class MasterViewController: UITableViewController {
         }
     }
 
+    func eachMatch(pattern: String, text: NSString, fn: (String -> ())) {
+        if let regex = buildRegexp(pattern) {
+            let matches = regex.matchesInString(text as String, options: [], range: NSMakeRange(0, text.length))
+            for match in matches {
+                let range = text.lineRangeForRange(match.range)
+                fn(text.substringWithRange(range).trim())
+            }
+        }
+    }
+
     func searchEn(searchText: String) -> [Translation] {
         var filtered = [Translation]()
-        if let regex = buildRegexp(searchText) {
-            let matches = regex.matchesInString(enWords as String, options: [], range: NSMakeRange(0, enWords.length))
-            for match in matches {
-                let range = enWords.lineRangeForRange(match.range)
-                let en = enWords.substringWithRange(range).trim()
-                if let eos = dictEnEo[en] {
-                    for eo in eos {
-                        if let n = dictEoEn[eo] {
-                            filtered.append(Translation(eo: eo, en: n))
-                        }
+        eachMatch(searchText, text: enWords) { en in
+            if let eos = self.dictEnEo[en] {
+                for eo in eos {
+                    if let n = self.dictEoEn[eo] {
+                        filtered.append(Translation(eo: eo, en: n))
                     }
                 }
             }
@@ -91,14 +96,9 @@ class MasterViewController: UITableViewController {
 
     func searchEo(searchText: String) -> [Translation] {
         var filtered = [Translation]()
-        if let regex = buildRegexp(searchText) {
-            let matches = regex.matchesInString(eoWords as String, options: [], range: NSMakeRange(0, eoWords.length))
-            for match in matches {
-                let range = eoWords.lineRangeForRange(match.range)
-                let eo = eoWords.substringWithRange(range).trim()
-                if let en = dictEoEn[eo] {
-                    filtered.append(Translation(eo: eo, en: en))
-                }
+        eachMatch(searchText, text: eoWords) { eo in
+            if let en = self.dictEoEn[eo] {
+                filtered.append(Translation(eo: eo, en: en))
             }
         }
         return filtered
