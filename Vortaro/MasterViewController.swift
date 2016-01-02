@@ -73,7 +73,7 @@ class MasterViewController: UITableViewController {
     func eachMatch(pattern: String, text: NSString, fn: (String -> ())) {
         if let regex = buildRegexp(pattern) {
             let matches = regex.matchesInString(text as String, options: [], range: NSMakeRange(0, text.length))
-            for match in matches {
+            for match in matches.prefix(10000) {
                 let range = text.lineRangeForRange(match.range)
                 fn(text.substringWithRange(range).trim())
             }
