@@ -52,7 +52,7 @@ class MasterViewController: UITableViewController {
 
     func buildRegexp(pattern: String) -> NSRegularExpression? {
         do {
-            return try NSRegularExpression(pattern: pattern, options: [.CaseInsensitive, .AnchorsMatchLines])
+            return try NSRegularExpression(pattern: "^\(pattern)", options: [.CaseInsensitive, .AnchorsMatchLines])
         } catch {
             return nil
         }
