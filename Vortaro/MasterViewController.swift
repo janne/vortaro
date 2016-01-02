@@ -50,7 +50,19 @@ class MasterViewController: UITableViewController {
         enWords = enWordsSet.joinWithSeparator("\n")
     }
 
-    func buildRegexp(pattern: String) -> NSRegularExpression? {
+    func buildRegexp(var pattern: String) -> NSRegularExpression? {
+        let replacements = [
+            "c": "ĉ",
+            "g": "ĝ",
+            "h": "ĥ",
+            "j": "ĵ",
+            "s": "ŝ",
+            "u": "ŭ",
+        ]
+        for (k, v) in replacements {
+            pattern = pattern.stringByReplacingOccurrencesOfString(k, withString: "[\(k)\(v)]")
+            pattern = pattern.stringByReplacingOccurrencesOfString(k.uppercaseString, withString: "[\(k.uppercaseString)\(v.uppercaseString)]")
+        }
         do {
             return try NSRegularExpression(pattern: "^\(pattern)", options: [.CaseInsensitive, .AnchorsMatchLines])
         } catch {
