@@ -28,10 +28,10 @@ class MasterViewController: UITableViewController {
         var eoWordsArr = [String]()
         var enWordsSet = Set<String>()
         for line in readFile("espdic").componentsSeparatedByString("\n") {
-            let words = line.componentsSeparatedByString(":")
+            let words = line.componentsSeparatedByString(":").map { $0.trim() }
             if words.count > 1 {
-                let eo = words[0].trim()
-                let en = words[1].trim()
+                let eo = words[0]
+                let en = words[1]
                 let translation = Translation(eo: eo, en: en)
                 dictEoEn[eo] = en
                 for word in translation.ens() {
