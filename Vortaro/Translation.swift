@@ -38,8 +38,8 @@ class Translation {
         if wordClass == .None {
             analyze()
         }
-        return inEsperanto()
-            + inEnglish()
+        return inEnglish()
+            + inEsperanto()
             + grammar()
             + links()
     }
