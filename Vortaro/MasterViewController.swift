@@ -126,7 +126,6 @@ class MasterViewController: UITableViewController {
 
         searchController.searchBar.scopeButtonTitles = ["Esperanto", "English"]
         searchController.searchBar.delegate = self
-        searchController.searchBar.placeholder = "Regular Expression"
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
