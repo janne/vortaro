@@ -8,9 +8,15 @@
 
 import Foundation
 
+enum WordClass {
+    case Phrase, Suffix, Prefix, Preposition, Pronoun, Numeral, Particle, Adverb, Verb, Noun, Adjective, Other
+}
+
 class Translation {
     var eo: String
     var en: String
+    var wordClass: WordClass?
+    var parts: [String]?
 
     init(eo: String, en: String) {
         self.eo = eo
@@ -25,29 +31,131 @@ class Translation {
         }
     }
 
+    func description() -> String {
+        if wordClass == .None {
+            analyze()
+        }
+        return inEsperanto()
+            + inEnglish()
+            + grammar()
+            + links()
+    }
+
+
+    func inEsperanto() -> String {
+        var s = eo
+        if let p = parts {
+            if p.count > 1 {
+                s = p.joinWithSeparator("+")
+            }
+        }
+        return "<h3>Esperantlingva</h3><p>\(s)</p>"
+    }
+
+    func inEnglish() -> String {
+        let ens_list: String
+        if ens().count > 1 {
+            ens_list = "<ul>" + ens().map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
+        } else {
+            ens_list = "<p>\(en)</p>"
+        }
+        return "<h3>Anglalingva</h3>"
+            + ens_list
+    }
+
+    func grammar() -> String {
+        var s = ""
+        if let wc = translatedWordClass() {
+            s += "<h3>Gramatiko</h3>"
+                + "Estas \(wc)"
+        }
+        if var p = parts {
+            if let wc = wordClass {
+                switch wc {
+                case .Verb:
+                    p.removeLast()
+                    s += "<p>\(verbTable(p.joinWithSeparator("")))</p>"
+                case .Noun, .Adjective:
+                    s += "<p>\(caseTable(p.joinWithSeparator("")))</p>"
+                default:
+                    false
+                }
+            }
+        }
+        return s
+    }
+
+    func links() -> String {
+        return "<h3>Retligoj</h3>"
+            + "<ul><li>"
+            + "<a href='https://eo.m.wikipedia.org/wiki/\(eo)'>Vikipedio</a>"
+            + "(<a href='https://en.m.wikipedia.org/wiki/\(ens()[0])'>en</a>)"
+            + "</li><li>"
+            + "<a href='https://eo.m.wiktionary.org/wiki/\(eo)'>Vikivortaro</a>"
+            + "(<a href='https://en.m.wiktionary.org/wiki/\(ens()[0])'>en</a>)"
+            + "</li><li>"
+            + "<a href='https://translate.google.com/#eo/en/\(eo)'>Google Translate</a>"
+            + "(<a href='https://translate.google.com/#en/eo/\(ens()[0])'>en</a>)"
+            + "</li></ul>"
+    }
+
+    func analyze() {
+        if isPhrase() {
+            wordClass = .Phrase
+        } else if isSuffix() {
+            wordClass = .Suffix
+        } else if isPrefix() {
+            wordClass = .Prefix
+        } else if prepositions().contains(eo.lowercaseString) {
+            wordClass = .Preposition
+        } else if pronouns().contains(eo.lowercaseString) {
+            wordClass = .Pronoun
+        } else if numerals().contains(eo.lowercaseString) {
+            wordClass = .Numeral
+        } else if particles().contains(eo.lowercaseString) {
+            wordClass = .Particle
+        } else if let parts = adverbParts() {
+            wordClass = .Adverb
+            self.parts = parts
+        } else if let parts = verbParts() {
+            wordClass = .Verb
+            self.parts = parts
+        } else if let parts = nounParts() {
+            wordClass = .Noun
+            self.parts = parts
+        } else if let parts = adjectiveParts() {
+            wordClass = .Adjective
+            self.parts = parts
+        } else {
+            wordClass = .Other
+        }
+    }
+
     func match(pattern: String) -> Range<String.Index>? {
         return eo.rangeOfString(pattern, options: [.RegularExpressionSearch, .CaseInsensitiveSearch])
     }
 
-    func nounBase() -> String? {
+    func nounParts() -> [String]? {
         if let range = match("oj?n?!?$") {
-            return eo[eo.startIndex..<range.startIndex]
+            let root = eo[eo.startIndex..<range.startIndex]
+            return [root, "o"]
         }
         return .None
     }
 
-    func verbBase() -> String? {
+    func verbParts() -> [String]? {
         if let range = match("(i|as|u)!?$") {
-            return eo[eo.startIndex..<range.startIndex]
+            let root = eo[eo.startIndex..<range.startIndex]
+            return [root, "i"]
         }
         return .None
     }
 
-    func adjectiveBase() -> String? {
+    func adjectiveParts() -> [String]? {
         if let range = match("aj?n?$") {
             let root = eo[eo.startIndex..<range.startIndex]
             if root.characters.count > 0 {
-                return eo[eo.startIndex..<range.startIndex]
+                return [root, "a"]
             } else {
                 return .None
             }
@@ -55,11 +163,18 @@ class Translation {
         return .None
     }
 
-    func isAdverb() -> Bool {
-        return match("en?!?$") != .None || adverbs().contains(eo.lowercaseString)
+    func adverbParts() -> [String]? {
+        if adverbs().contains(eo.lowercaseString) {
+            return [eo]
+        }
+        if let range = match("en?!?$") {
+            let root = eo[eo.startIndex..<range.startIndex]
+            return [root, "e"]
+        }
+        return .None
     }
 
-    func isExpression() -> Bool {
+    func isPhrase() -> Bool {
         return match(" ") != .None
     }
 
@@ -82,11 +197,11 @@ class Translation {
             + "</table>"
     }
 
-    func caseTable(root: String, type: String) -> String {
+    func caseTable(root: String) -> String {
         return "<table>"
             + "<tr><th>Kazo</th><th>Ununombro</th><th>Multenombro</th></tr>"
-            + "<tr><td><b>Nominativo</b></td><td>\(root)\(type)</td><td>\(root)\(type)j</td></tr>"
-            + "<tr><td><b>Akuzativo</b></td><td>\(root)\(type)n</td><td>\(root)\(type)jn</td></tr>"
+            + "<tr><td><b>Nominativo</b></td><td>\(root)</td><td>\(root)j</td></tr>"
+            + "<tr><td><b>Akuzativo</b></td><td>\(root)n</td><td>\(root)jn</td></tr>"
             + "</table>"
     }
 
@@ -99,7 +214,7 @@ class Translation {
         return ["baldaŭ", "hieraŭ", "hodiaŭ", "morgaŭ", "nun", "postmorgaŭ", "preskaŭ"]
     }
 
-    func pronomes() -> [String] {
+    func pronouns() -> [String] {
         return ["ambaŭ", "ili", "li", "mi", "ni", "oni", "si", "vi", "ĝi", "ŝi"]
     }
 
@@ -122,32 +237,23 @@ class Translation {
 
     }
 
-    func etymology() -> String {
-        if isExpression() {
-            return ""
+    func translatedWordClass() -> String? {
+        if let wc = wordClass {
+            switch wc {
+            case .Phrase: return "frazo"
+            case .Suffix: return "sufikso"
+            case .Prefix: return "prefikso"
+            case .Preposition: return "prepozicio"
+            case .Pronoun: return "pronomo"
+            case .Numeral: return "numeralo"
+            case .Particle: return "partiklo"
+            case .Adverb: return "adverbo"
+            case .Verb: return "verbo"
+            case .Noun: return "substantivo"
+            case .Adjective: return "adjektivo"
+            case .Other: return .None
+            }
         }
-        if isSuffix() {
-            return "<h3>Suffix</h3>"
-        } else if isPrefix() {
-            return "<h3>Prefix</h3>"
-        } else if prepositions().contains(eo.lowercaseString) {
-            return "<h3>Preposition</h3>"
-        } else if pronomes().contains(eo.lowercaseString) {
-            return "<h3>Pronomo</h3>"
-        } else if numerals().contains(eo.lowercaseString) {
-            return "<h3>Numeralo</h3>"
-        } else if particles().contains(eo.lowercaseString) {
-            return "<h3>Particle</h3>"
-        } else if isAdverb() {
-            return "<h3>Adverb</h3>"
-        } else if let base = verbBase() {
-            return "<h3>Verb</h3>" + verbTable(base)
-        } else if let base = nounBase() {
-            return "<h3>Substantivo</h3>" + caseTable(base, type: "o")
-        } else if let base = adjectiveBase() {
-            return "<h3>Adjektivo</h3>" + caseTable(base, type: "a")
-        } else {
-            return ""
-        }
+        return .None
     }
 }
