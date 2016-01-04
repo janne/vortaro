@@ -100,7 +100,7 @@ class Translation {
     }
 
     func links() -> String {
-        return "<h3>Retligoj</h3>"
+        return "<h3>Retligiloj</h3>"
             + "<ul><li>"
             + "<a href='https://eo.m.wikipedia.org/wiki/\(eo)'>Vikipedio</a>"
             + "(<a href='https://en.m.wikipedia.org/wiki/\(ens()[0])'>en</a>)"
