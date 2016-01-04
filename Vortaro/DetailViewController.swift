@@ -41,6 +41,9 @@ class DetailViewController: UIViewController {
                     + "</li><li>"
                     + "<a href='https://eo.m.wiktionary.org/wiki/\(detail.eo)'>Vikivortaro</a>"
                     + "(<a href='https://en.m.wiktionary.org/wiki/\(detail.ens()[0])'>en</a>)"
+                    + "</li><li>"
+                    + "<a href='https://translate.google.com/#eo/en/\(detail.eo)'>Google Translate</a>"
+                    + "(<a href='https://translate.google.com/#en/eo/\(detail.ens()[0])'>en</a>)"
                     + "</li></ul></body>"
                 view.loadHTMLString(lbl, baseURL: nil)
             }
