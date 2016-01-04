@@ -28,7 +28,7 @@ class MasterViewController: UITableViewController {
         var eoWordsArr = [String]()
         var enWordsSet = Set<String>()
         for line in readFile("espdic").componentsSeparatedByString("\n") {
-            let words = line.componentsSeparatedByString(":").map { $0.trim() }
+            let words = line.componentsSeparatedByString(" : ").map { $0.trim() }
             if words.count > 1 {
                 let eo = words[0]
                 let en = words[1]
