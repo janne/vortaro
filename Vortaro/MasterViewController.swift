@@ -102,13 +102,32 @@ class MasterViewController: UITableViewController {
         return filtered
     }
 
+    func searchBoth(searchText: String) -> [Translation] {
+        var filtered = Set<Translation>()
+        eachMatch(searchText, text: eoWords) { eo in
+            if let translation = self.translationsByEo[eo] {
+                filtered.insert(translation)
+            }
+        }
+        eachMatch(searchText, text: enWords) { en in
+            if let translations = self.translationsByEn[en] {
+                for translation in translations {
+                    filtered.insert(translation)
+                }
+            }
+        }
+        return filtered.sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
+    }
+
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
         if searchText == "" {
             filteredObjects = objects
         } else if scope == "Esperanto" {
             filteredObjects = searchEo(searchText)
-        } else {
+        } else if scope == "English" {
             filteredObjects = searchEn(searchText)
+        } else {
+            filteredObjects = searchBoth(searchText)
         }
         tableView.reloadData()
     }
@@ -122,7 +141,7 @@ class MasterViewController: UITableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
-        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English"]
+        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Both"]
         searchController.searchBar.delegate = self
 
         if let split = self.splitViewController {
