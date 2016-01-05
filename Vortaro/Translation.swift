@@ -138,7 +138,7 @@ class Translation {
             wordClass = .Adverb
             self.base = base
             self.parts = parts
-        } else if let (base, parts) = partsByPattern("(i|as|u)!?$") {
+        } else if let (base, parts) = partsByPattern("i!?$") {
             wordClass = .Verb
             self.base = base
             self.parts = parts
