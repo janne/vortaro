@@ -9,7 +9,7 @@
 import Foundation
 
 enum WordClass {
-    case Phrase, Suffix, Prefix, Preposition, Pronoun, Numeral, Particle, Adverb, Verb, Noun, Adjective, Other
+    case Phrase, Suffix, Prefix, Preposition, Pronoun, Numeral, Particle, Adverb, Verb, Noun, Adjective, Correlative, Other
 }
 
 typealias GrammarResult = (String, [String])
@@ -25,6 +25,17 @@ class Translation : Hashable {
     let prepositions = ["al", "anstataŭ", "antaŭ", "apud", "cis", "ĉe", "ĉirkaŭ", "da", "de", "disde", "dum", "ekde", "ekster", "el", "en", "estiel", "far", "for", "graŭ", "ĝis", "inter", "je", "kiel", "kontraŭ", "krom", "kun", "laŭ", "malantaŭ", "malapud", "malgraŭ", "malsupre", "meze", "na", "per", "po", "por", "post", "preter", "pri", "pro", "proksime", "samkiel", "sen", "sob", "sub", "super", "sur", "tra", "trans"]
     let particles = ["ajn", "almenaŭ", "ankaŭ", "apenaŭ", "eĉ", "hoj", "ja", "jam", "jes", "kaj", "ke", "kvankam", "kvazaŭ", "malpli", "malplej", "mem", "nek", "nur", "ol", "plej", "pli", "plu", "se", "sed", "tamen", "tre", "tro", "tuj", "ĉar", "ĉi", "ĵus"]
     let adverbs = ["baldaŭ", "hieraŭ", "hodiaŭ", "morgaŭ", "nun", "postmorgaŭ", "preskaŭ"]
+    let correlative_prefixes = ["ki", "ti", "i", "ĉi", "neni"]
+    let correlative_suffixes = ["o", "u", "a", "e", "el", "al", "am", "om", "es"]
+    var correlatives: [String] {
+        var c = [String]()
+        correlative_prefixes.forEach { p in
+            correlative_suffixes.forEach { s in
+                c.append(p + s)
+            }
+        }
+        return c
+    }
 
     init(eo: String, en: String) {
         self.eo = eo
@@ -88,17 +99,17 @@ class Translation : Hashable {
             s += wc + "</p>"
         }
         if let wc = wordClass {
-            if let b = base {
-                switch wc {
-                case .Verb:
-                    s += "<p>\(verbTable(b))</p>"
-                case .Noun:
-                    s += "<p>\(caseTable(b + "o"))</p>"
-                case .Adjective:
-                    s += "<p>\(caseTable(b + "a"))</p>"
-                default:
-                    false
-                }
+            switch wc {
+            case .Verb:
+                s += "<p>\(verbTable(base!))</p>"
+            case .Noun:
+                s += "<p>\(caseTable(base! + "o"))</p>"
+            case .Adjective:
+                s += "<p>\(caseTable(base! + "a"))</p>"
+            case .Correlative:
+                s += "<p>\(correlativeTable())</p>"
+            default:
+                false
             }
         }
         return s
@@ -135,6 +146,8 @@ class Translation : Hashable {
             wordClass = .Particle
         } else if adverbs.contains(eo.lowercaseString) {
             wordClass = .Adverb
+        } else if correlatives.contains(eo.lowercaseString) {
+            wordClass = .Correlative
         } else if let (base, parts) = partsByPattern("en?!?$") {
             wordClass = .Adverb
             self.base = base
@@ -205,6 +218,27 @@ class Translation : Hashable {
             + "</table>"
     }
 
+    func correlativeTable() -> String {
+        var result = "<table><tr><th></th>"
+        for p in correlative_prefixes {
+            result += "<th>\(p.uppercaseString)-</th>"
+        }
+        result += "</tr>"
+        for s in correlative_suffixes {
+            result += "<tr><td><b>-\(s.uppercaseString)</b></td>"
+            for p in correlative_prefixes {
+                if p + s == eo {
+                    result += "<td><b><u>\(p + s)</u></b></td>"
+                } else {
+                    result += "<td>\(p + s)</td>"
+                }
+            }
+            result += "</tr>"
+        }
+        result += "</table>"
+        return result
+    }
+
     func numerals() -> [String] {
         var results = ["nul", "unu"]
         let nums = ["du", "tri", "kvar", "kvin", "ses", "sep", "ok", "naŭ"]
@@ -233,6 +267,7 @@ class Translation : Hashable {
             case .Verb: return "verbo"
             case .Noun: return "substantivo"
             case .Adjective: return "adjektivo"
+            case .Correlative: return "korelativo"
             case .Other: return .None
             }
         }
