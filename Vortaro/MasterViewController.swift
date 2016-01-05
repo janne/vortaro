@@ -16,8 +16,8 @@ class MasterViewController: UITableViewController {
     var filteredObjects = [Translation]()
     var eoWords: NSString = ""
     var enWords: NSString = ""
-    var dictEoEn = [String: String]()
-    var dictEnEo = [String: [String]]()
+    var translationsByEo = [String: Translation]()
+    var translationsByEn = [String: [Translation]]()
 
     func readFile(file: String, ofType type: String = "txt") -> String {
         let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
@@ -33,13 +33,13 @@ class MasterViewController: UITableViewController {
                 let eo = words[0]
                 let en = words[1]
                 let translation = Translation(eo: eo, en: en)
-                dictEoEn[eo] = en
+                translationsByEo[eo] = translation
                 for word in translation.ens() {
-                    var eos = dictEnEo[word] ?? []
-                    if !eos.contains(eo) {
-                        eos.append(eo)
+                    var translations = translationsByEn[word] ?? []
+                    if !translations.contains(translation) {
+                        translations.append(translation)
                     }
-                    dictEnEo[word] = eos
+                    translationsByEn[word] = translations
                     enWordsSet.insert(word)
                 }
                 eoWordsArr.append(eo)
@@ -81,24 +81,22 @@ class MasterViewController: UITableViewController {
     }
 
     func searchEn(searchText: String) -> [Translation] {
-        var filtered = [Translation]()
+        var filtered = Set<Translation>()
         eachMatch(searchText, text: enWords) { en in
-            if let eos = self.dictEnEo[en] {
-                for eo in eos {
-                    if let n = self.dictEoEn[eo] {
-                        filtered.append(Translation(eo: eo, en: n))
-                    }
+            if let translations = self.translationsByEn[en] {
+                for translation in translations {
+                    filtered.insert(translation)
                 }
             }
         }
-        return filtered
+        return filtered.sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
     }
 
     func searchEo(searchText: String) -> [Translation] {
         var filtered = [Translation]()
         eachMatch(searchText, text: eoWords) { eo in
-            if let en = self.dictEoEn[eo] {
-                filtered.append(Translation(eo: eo, en: en))
+            if let translation = self.translationsByEo[eo] {
+                filtered.append(translation)
             }
         }
         return filtered

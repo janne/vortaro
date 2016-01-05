@@ -14,7 +14,8 @@ enum WordClass {
 
 typealias GrammarResult = (String, [String])
 
-class Translation {
+class Translation : Hashable {
+    var hashValue : Int { return eo.hashValue }
     var eo: String
     var en: String
     var wordClass: WordClass?
@@ -237,4 +238,8 @@ class Translation {
         }
         return .None
     }
+}
+
+func ==(lhs: Translation, rhs: Translation) -> Bool {
+    return lhs.hashValue == rhs.hashValue
 }
