@@ -1,7 +1,7 @@
 Vortaro
 =======
 
-A simple, yet powerful, Esperanto-English dictionary iPhone app.
+A simple, yet powerful, offline Esperanto-English dictionary iPhone app.
 
 Usage
 -----
