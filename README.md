@@ -33,6 +33,7 @@ Some example patterns:
 | `vi..ro$`      | "vi" as prefix and "ro" as suffix, six letters  |
 | `vi.{5}ro$`    | "vi" as prefix and "ro" as suffix, nine letters |
 | `(viro|hundo)` | "viro" or "hundo" as prefix                     |
+| `.*oj?n?$`     | all nouns                                       |
 
 The regular expressions are powered by [ICU's Regular Expressions package](http://userguide.icu-project.org/strings/regexp).
 
