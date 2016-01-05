@@ -210,11 +210,18 @@ class Translation : Hashable {
             + "</table>"
     }
 
+    func j(word: String) -> String {
+        if word == eo {
+            return "<b><u>\(word)</u></b>"
+        }
+        return word
+    }
+
     func caseTable(base: String) -> String {
         return "<table>"
             + "<tr><th>Kazo</th><th>Ununombro</th><th>Multenombro</th></tr>"
-            + "<tr><td><b>Nominativo</b></td><td>\(base)</td><td>\(base)j</td></tr>"
-            + "<tr><td><b>Akuzativo</b></td><td>\(base)n</td><td>\(base)jn</td></tr>"
+            + "<tr><td><b>Nominativo</b></td><td>\(j(base))</td><td>\(j(base + "j"))</td></tr>"
+            + "<tr><td><b>Akuzativo</b></td><td>\(j(base + "n"))</td><td>\(j(base + "jn"))</td></tr>"
             + "</table>"
     }
 
