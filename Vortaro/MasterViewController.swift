@@ -199,9 +199,11 @@ class MasterViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let object = translations()[indexPath.row]
-        cell.textLabel?.text = object.eo
-        cell.detailTextLabel?.text = object.en
+        if indexPath.row < translations().count {
+            let object = translations()[indexPath.row]
+            cell.textLabel?.text = object.eo
+            cell.detailTextLabel?.text = object.en
+        }
         return cell
     }
 }
