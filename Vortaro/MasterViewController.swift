@@ -18,6 +18,7 @@ class MasterViewController: UITableViewController {
     var enWords: NSString = ""
     var translationsByEo = [String: Translation]()
     var translationsByEn = [String: [Translation]]()
+    let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
 
     func readFile(file: String, ofType type: String = "txt") -> String {
         let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
@@ -120,16 +121,20 @@ class MasterViewController: UITableViewController {
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
-        if searchText == "" {
-            filteredObjects = objects
-        } else if scope == "Esperanto" {
-            filteredObjects = searchEo(searchText)
-        } else if scope == "English" {
-            filteredObjects = searchEn(searchText)
-        } else {
-            filteredObjects = searchBoth(searchText)
+        dispatch_async(queue) {
+            if searchText == "" {
+                self.filteredObjects = self.objects
+            } else if scope == "Esperanto" {
+                self.filteredObjects = self.searchEo(searchText)
+            } else if scope == "English" {
+                self.filteredObjects = self.searchEn(searchText)
+            } else {
+                self.filteredObjects = self.searchBoth(searchText)
+            }
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
         }
-        tableView.reloadData()
     }
 
     override func viewDidLoad() {
