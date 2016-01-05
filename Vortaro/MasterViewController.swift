@@ -9,7 +9,7 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-
+    @IBOutlet weak var activityView: UIView!
     var detailViewController: DetailViewController? = nil
     let searchController = UISearchController(searchResultsController: nil)
     var objects = [Translation]()
@@ -139,12 +139,19 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        readWordList()
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), {
+            self.readWordList()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.activityView.hidden = true
+                self.tableView.tableHeaderView = self.searchController.searchBar
+                self.tableView.reloadData()
+            })
+        })
 
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
         definesPresentationContext = true
-        tableView.tableHeaderView = searchController.searchBar
 
         searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Both"]
         searchController.searchBar.delegate = self
@@ -219,3 +226,5 @@ extension MasterViewController: UISearchBarDelegate {
         filterContentForSearchText(searchBar.text!, scope: searchBar.scopeButtonTitles![selectedScope])
     }
 }
+
+

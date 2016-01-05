@@ -78,6 +78,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <view key="tableFooterView" contentMode="scaleToFill" id="wmB-qy-i13">
+                            <rect key="frame" x="0.0" y="136" width="600" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-hr-5Ta">
+                                    <rect key="frame" x="282" y="31" width="37" height="37"/>
+                                    <color key="color" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </activityIndicatorView>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="fPS-hr-5Ta" firstAttribute="centerY" secondItem="wmB-qy-i13" secondAttribute="centerY" id="AHF-de-er1"/>
+                                <constraint firstItem="fPS-hr-5Ta" firstAttribute="centerX" secondItem="wmB-qy-i13" secondAttribute="centerX" id="q8F-Rr-hWb"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="Arm-wq-HPj" detailTextLabel="ofG-N8-y3f" style="IBUITableViewCellStyleValue1" id="WCw-Qf-5nD">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
@@ -115,6 +130,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Vortaro" id="Zdf-7t-Un8"/>
+                    <connections>
+                        <outlet property="activityView" destination="wmB-qy-i13" id="2jr-xO-Lgi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>
