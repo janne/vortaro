@@ -7,6 +7,8 @@ Usage
 -----
 Write the first letters in the word you're looking for in the search box. By default it searches in Esperanto, change to English or Both as preferred. In any case the sorting is done by Esperanto.
 
+Diacritic marks are automatically added, so if you search or "si" you will find both "si" and "ŝi".
+
 The result will be presented with the Esperanto word/phrase on the left and english translations on the right, separated by commas.
 
 ![Screenshot of Search](Screenshots/screenshot_search.jpg)
@@ -24,7 +26,8 @@ Some example patterns:
 | Pattern        | Result                                          |
 | -------------- | ----------------------------------------------- |
 | `viro`         | "viro" as prefix                                |
-| `.*viro`       | "viro" anywhere in the words                    |
+| `viro$`        | "viro" as full word, only one hit               |
+| `.*viro`       | "viro" anywhere in the word                     |
 | `.*viro$`      | "viro" as suffix                                |
 | `vi.*ro$`      | "vi" as prefix and "ro" as suffix               |
 | `vi..ro$`      | "vi" as prefix and "ro" as suffix, six letters  |
