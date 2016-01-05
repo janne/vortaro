@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB2344041C3C04BE00B0E9B8 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = FB2344031C3C04BE00B0E9B8 /* README.md */; };
+		FB2344061C3C05DC00B0E9B8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = FB2344051C3C05DC00B0E9B8 /* LICENSE */; };
 		FB78A2CD1C3131BC009545DE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2CC1C3131BC009545DE /* AppDelegate.swift */; };
 		FB78A2CF1C3131BC009545DE /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2CE1C3131BC009545DE /* MasterViewController.swift */; };
 		FB78A2D11C3131BC009545DE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2D01C3131BC009545DE /* DetailViewController.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB2344031C3C04BE00B0E9B8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		FB2344051C3C05DC00B0E9B8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FB78A2C91C3131BC009545DE /* Vortaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Vortaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB78A2CC1C3131BC009545DE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB78A2CE1C3131BC009545DE /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 		FB78A2C01C3131BC009545DE = {
 			isa = PBXGroup;
 			children = (
+				FB2344051C3C05DC00B0E9B8 /* LICENSE */,
+				FB2344031C3C04BE00B0E9B8 /* README.md */,
 				FB78A2CB1C3131BC009545DE /* Vortaro */,
 				FB78A2E21C3131BD009545DE /* VortaroTests */,
 				FB78A2ED1C3131BD009545DE /* VortaroUITests */,
@@ -246,6 +252,7 @@
 				FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */,
 				FB78A2D61C3131BC009545DE /* Assets.xcassets in Resources */,
 				FB78A2D41C3131BC009545DE /* Main.storyboard in Resources */,
+				FB2344061C3C05DC00B0E9B8 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB2344041C3C04BE00B0E9B8 /* README.md in Sources */,
 				FBC322FC1C314A6900A4BB11 /* Utils.swift in Sources */,
 				FB78A2D11C3131BC009545DE /* DetailViewController.swift in Sources */,
 				FB78A2CF1C3131BC009545DE /* MasterViewController.swift in Sources */,
