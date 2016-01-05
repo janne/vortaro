@@ -90,7 +90,7 @@ class Translation {
             if let b = base {
                 switch wc {
                 case .Verb:
-                    s += "<p>\(verbTable(b + "i"))</p>"
+                    s += "<p>\(verbTable(b))</p>"
                 case .Noun:
                     s += "<p>\(caseTable(b + "o"))</p>"
                 case .Adjective:
