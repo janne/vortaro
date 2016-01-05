@@ -152,7 +152,7 @@ class Translation : Hashable {
             wordClass = .Adverb
             self.base = base
             self.parts = parts
-        } else if let (base, parts) = partsByPattern("i!?$") {
+        } else if let (base, parts) = partsByPattern("i$") {
             wordClass = .Verb
             self.base = base
             self.parts = parts
