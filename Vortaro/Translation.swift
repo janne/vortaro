@@ -20,6 +20,10 @@ class Translation {
     var wordClass: WordClass?
     var base: String?
     var parts: [String]?
+    let pronouns = ["ambaŭ", "ili", "li", "mi", "ni", "oni", "si", "vi", "ĝi", "ŝi"]
+    let prepositions = ["al", "anstataŭ", "antaŭ", "apud", "cis", "ĉe", "ĉirkaŭ", "da", "de", "disde", "dum", "ekde", "ekster", "el", "en", "estiel", "far", "for", "graŭ", "ĝis", "inter", "je", "kiel", "kontraŭ", "krom", "kun", "laŭ", "malantaŭ", "malapud", "malgraŭ", "malsupre", "meze", "na", "per", "po", "por", "post", "preter", "pri", "pro", "proksime", "samkiel", "sen", "sob", "sub", "super", "sur", "tra", "trans"]
+    let particles = ["ajn", "almenaŭ", "ankaŭ", "apenaŭ", "eĉ", "hoj", "ja", "jam", "jes", "kaj", "ke", "kvankam", "kvazaŭ", "malpli", "malplej", "mem", "nek", "nur", "ol", "plej", "pli", "plu", "se", "sed", "tamen", "tre", "tro", "tuj", "ĉar", "ĉi", "ĵus"]
+    let adverbs = ["baldaŭ", "hieraŭ", "hodiaŭ", "morgaŭ", "nun", "postmorgaŭ", "preskaŭ"]
 
     init(eo: String, en: String) {
         self.eo = eo
@@ -120,27 +124,29 @@ class Translation {
             wordClass = .Suffix
         } else if isPrefix() {
             wordClass = .Prefix
-        } else if prepositions().contains(eo.lowercaseString) {
+        } else if prepositions.contains(eo.lowercaseString) {
             wordClass = .Preposition
-        } else if pronouns().contains(eo.lowercaseString) {
+        } else if pronouns.contains(eo.lowercaseString) {
             wordClass = .Pronoun
         } else if numerals().contains(eo.lowercaseString) {
             wordClass = .Numeral
-        } else if particles().contains(eo.lowercaseString) {
+        } else if particles.contains(eo.lowercaseString) {
             wordClass = .Particle
-        } else if let (base, parts) = adverbParts() {
+        } else if adverbs.contains(eo.lowercaseString) {
+            wordClass = .Adverb
+        } else if let (base, parts) = partsByPattern("en?!?$") {
             wordClass = .Adverb
             self.base = base
             self.parts = parts
-        } else if let (base, parts) = verbParts() {
+        } else if let (base, parts) = partsByPattern("(i|as|u)!?$") {
             wordClass = .Verb
             self.base = base
             self.parts = parts
-        } else if let (base, parts) = nounParts() {
+        } else if let (base, parts) = partsByPattern("oj?n?!?$") {
             wordClass = .Noun
             self.base = base
             self.parts = parts
-        } else if let (base, parts) = adjectiveParts() {
+        } else if let (base, parts) = partsByPattern("aj?n?$") {
             wordClass = .Adjective
             self.base = base
             self.parts = parts
@@ -153,32 +159,8 @@ class Translation {
         return eo.rangeOfString(pattern, options: [.RegularExpressionSearch, .CaseInsensitiveSearch])
     }
 
-    func nounParts() -> GrammarResult? {
-        if let range = match("oj?n?!?$") {
-            let base = eo[eo.startIndex..<range.startIndex]
-            var parts = [base]
-            for char in eo[range.startIndex..<eo.endIndex].characters {
-                parts.append(String(char))
-            }
-            return (base, parts)
-        }
-        return .None
-    }
-
-    func verbParts() -> GrammarResult? {
-        if let range = match("(i|as|u)!?$") {
-            let base = eo[eo.startIndex..<range.startIndex]
-            var parts = [base]
-            for char in eo[range.startIndex..<eo.endIndex].characters {
-                parts.append(String(char))
-            }
-            return (base, parts)
-        }
-        return .None
-    }
-
-    func adjectiveParts() -> GrammarResult? {
-        if let range = match("aj?n?$") {
+    func partsByPattern(pattern: String) -> GrammarResult? {
+        if let range = match(pattern) {
             let base = eo[eo.startIndex..<range.startIndex]
             if base.characters.count > 0 {
                 var parts = [base]
@@ -186,24 +168,7 @@ class Translation {
                     parts.append(String(char))
                 }
                 return (base, parts)
-            } else {
-                return .None
             }
-        }
-        return .None
-    }
-
-    func adverbParts() -> GrammarResult? {
-        if adverbs().contains(eo.lowercaseString) {
-            return (eo, [eo])
-        }
-        if let range = match("en?!?$") {
-            let base = eo[eo.startIndex..<range.startIndex]
-            var parts = [base]
-            for char in eo[range.startIndex..<eo.endIndex].characters {
-                parts.append(String(char))
-            }
-            return (base, parts)
         }
         return .None
     }
@@ -239,19 +204,6 @@ class Translation {
             + "</table>"
     }
 
-    func prepositions() -> [String] {
-        return ["al", "anstataŭ", "antaŭ", "apud", "cis", "ĉe", "ĉirkaŭ", "da", "de", "disde", "dum", "ekde", "ekster", "el", "en", "estiel", "far", "for", "graŭ", "ĝis", "inter", "je", "kiel", "kontraŭ", "krom", "kun", "laŭ", "malantaŭ", "malapud", "malgraŭ", "malsupre", "meze", "na", "per", "po", "por", "post", "preter", "pri", "pro", "proksime", "samkiel", "sen", "sob", "sub", "super", "sur", "tra", "trans"]
-
-    }
-
-    func adverbs() -> [String] {
-        return ["baldaŭ", "hieraŭ", "hodiaŭ", "morgaŭ", "nun", "postmorgaŭ", "preskaŭ"]
-    }
-
-    func pronouns() -> [String] {
-        return ["ambaŭ", "ili", "li", "mi", "ni", "oni", "si", "vi", "ĝi", "ŝi"]
-    }
-
     func numerals() -> [String] {
         var results = ["nul", "unu"]
         let nums = ["du", "tri", "kvar", "kvin", "ses", "sep", "ok", "naŭ"]
@@ -264,11 +216,6 @@ class Translation {
             }
         }
         return results
-    }
-
-    func particles() -> [String] {
-        return ["ajn", "almenaŭ", "ankaŭ", "apenaŭ", "eĉ", "hoj", "ja", "jam", "jes", "kaj", "ke", "kvankam", "kvazaŭ", "malpli", "malplej", "mem", "nek", "nur", "ol", "plej", "pli", "plu", "se", "sed", "tamen", "tre", "tro", "tuj", "ĉar", "ĉi", "ĵus"]
-
     }
 
     func translatedWordClass() -> String? {
