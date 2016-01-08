@@ -16,8 +16,11 @@
 		FB78A2E41C3131BD009545DE /* VortaroTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2E31C3131BD009545DE /* VortaroTests.swift */; };
 		FB78A2EF1C3131BD009545DE /* VortaroUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */; };
 		FBC322F81C313AF500A4BB11 /* Translation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC322F71C313AF500A4BB11 /* Translation.swift */; };
-		FBC322FA1C3142EC00A4BB11 /* espdic.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBC322F91C3142EC00A4BB11 /* espdic.txt */; };
 		FBC322FC1C314A6900A4BB11 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC322FB1C314A6900A4BB11 /* Utils.swift */; };
+		FBDC21521C3FBB5A00090C6E /* ens.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBDC214E1C3FBB5A00090C6E /* ens.txt */; };
+		FBDC21531C3FBB5A00090C6E /* eos.txt in Resources */ = {isa = PBXBuildFile; fileRef = FBDC214F1C3FBB5A00090C6E /* eos.txt */; };
+		FBDC21541C3FBB5A00090C6E /* en_to_eos.json in Resources */ = {isa = PBXBuildFile; fileRef = FBDC21501C3FBB5A00090C6E /* en_to_eos.json */; };
+		FBDC21551C3FBB5A00090C6E /* eo_to_ens.json in Resources */ = {isa = PBXBuildFile; fileRef = FBDC21511C3FBB5A00090C6E /* eo_to_ens.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +56,11 @@
 		FB78A2EE1C3131BD009545DE /* VortaroUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VortaroUITests.swift; sourceTree = "<group>"; };
 		FB78A2F01C3131BD009545DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBC322F71C313AF500A4BB11 /* Translation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Translation.swift; sourceTree = "<group>"; };
-		FBC322F91C3142EC00A4BB11 /* espdic.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = espdic.txt; sourceTree = "<group>"; };
 		FBC322FB1C314A6900A4BB11 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		FBDC214E1C3FBB5A00090C6E /* ens.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ens.txt; sourceTree = "<group>"; };
+		FBDC214F1C3FBB5A00090C6E /* eos.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = eos.txt; sourceTree = "<group>"; };
+		FBDC21501C3FBB5A00090C6E /* en_to_eos.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = en_to_eos.json; sourceTree = "<group>"; };
+		FBDC21511C3FBB5A00090C6E /* eo_to_ens.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = eo_to_ens.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,9 +111,12 @@
 		FB78A2CB1C3131BC009545DE /* Vortaro */ = {
 			isa = PBXGroup;
 			children = (
+				FBDC214E1C3FBB5A00090C6E /* ens.txt */,
+				FBDC214F1C3FBB5A00090C6E /* eos.txt */,
+				FBDC21501C3FBB5A00090C6E /* en_to_eos.json */,
+				FBDC21511C3FBB5A00090C6E /* eo_to_ens.json */,
 				FB78A2CC1C3131BC009545DE /* AppDelegate.swift */,
 				FB78A2CE1C3131BC009545DE /* MasterViewController.swift */,
-				FBC322F91C3142EC00A4BB11 /* espdic.txt */,
 				FB78A2D01C3131BC009545DE /* DetailViewController.swift */,
 				FB78A2D21C3131BC009545DE /* Main.storyboard */,
 				FB78A2D51C3131BC009545DE /* Assets.xcassets */,
@@ -242,10 +251,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FBC322FA1C3142EC00A4BB11 /* espdic.txt in Resources */,
 				FB78A2D91C3131BC009545DE /* LaunchScreen.storyboard in Resources */,
+				FBDC21541C3FBB5A00090C6E /* en_to_eos.json in Resources */,
+				FBDC21531C3FBB5A00090C6E /* eos.txt in Resources */,
 				FB78A2D61C3131BC009545DE /* Assets.xcassets in Resources */,
 				FB78A2D41C3131BC009545DE /* Main.storyboard in Resources */,
+				FBDC21521C3FBB5A00090C6E /* ens.txt in Resources */,
+				FBDC21551C3FBB5A00090C6E /* eo_to_ens.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

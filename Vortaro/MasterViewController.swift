@@ -16,39 +16,40 @@ class MasterViewController: UITableViewController {
     var filteredObjects = [Translation]()
     var eoWords: NSString = ""
     var enWords: NSString = ""
-    var translationsByEo = [String: Translation]()
-    var translationsByEn = [String: [Translation]]()
+    var enToEos = [String: [String]]()
+    var eoToEns = [String: [String]]()
     let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
 
-    func readFile(file: String, ofType type: String = "txt") -> String {
+    func readText(file: String, ofType type: String = "txt") -> String {
         let path = NSBundle.mainBundle().pathForResource(file, ofType: type)
         return try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
     }
 
-    func readWordList() {
-        var eoWordsArr = [String]()
-        var enWordsSet = Set<String>()
-        for line in readFile("espdic").componentsSeparatedByString("\n") {
-            let words = line.componentsSeparatedByString(" : ").map { $0.trim() }
-            if words.count > 1 {
-                let eo = words[0]
-                let en = words[1]
-                let translation = Translation(eo: eo, en: en)
-                translationsByEo[eo] = translation
-                for word in translation.ens() {
-                    var translations = translationsByEn[word] ?? []
-                    if !translations.contains(translation) {
-                        translations.append(translation)
-                    }
-                    translationsByEn[word] = translations
-                    enWordsSet.insert(word)
+    func readJSON(file: String, ofType type: String = "json") -> [String: [String]] {
+        if let jsonList = NSBundle.mainBundle().pathForResource(file, ofType: "json") {
+            if let theList = NSData(contentsOfFile: jsonList) {
+                let listStream = NSInputStream(data: theList)
+                listStream.open()
+                do {
+                    return try NSJSONSerialization.JSONObjectWithStream(listStream, options: [.AllowFragments]) as! [String : [String]]
+                } catch {
+                    return [:]
                 }
-                eoWordsArr.append(eo)
-                objects.append(translation)
             }
         }
-        eoWords = eoWordsArr.joinWithSeparator("\n")
-        enWords = enWordsSet.joinWithSeparator("\n")
+        return [:]
+    }
+
+
+    func readWordList() {
+        enWords = readText("ens")
+        eoWords = readText("eos")
+        enToEos = readJSON("en_to_eos")
+        eoToEns = readJSON("eo_to_ens")
+
+        for eo in eoWords.componentsSeparatedByString("\n") {
+            objects.append(Translation(eo: eo, ens: eoToEns[eo] ?? []))
+        }
     }
 
     func buildRegexp(var pattern: String) -> NSRegularExpression? {
@@ -82,41 +83,29 @@ class MasterViewController: UITableViewController {
     }
 
     func searchEn(searchText: String) -> [Translation] {
-        var filtered = Set<Translation>()
+        var filtered = [Translation]()
         eachMatch(searchText, text: enWords) { en in
-            if let translations = self.translationsByEn[en] {
-                for translation in translations {
-                    filtered.insert(translation)
+            if let eos = self.enToEos[en] {
+                for eo in eos {
+                    filtered.append(Translation(eo: eo, ens: self.eoToEns[eo] ?? []))
                 }
             }
         }
-        return filtered.sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
+        return filtered
     }
 
     func searchEo(searchText: String) -> [Translation] {
         var filtered = [Translation]()
         eachMatch(searchText, text: eoWords) { eo in
-            if let translation = self.translationsByEo[eo] {
-                filtered.append(translation)
+            if let ens = self.eoToEns[eo] {
+                filtered.append(Translation(eo: eo, ens: ens))
             }
         }
         return filtered
     }
 
     func searchBoth(searchText: String) -> [Translation] {
-        var filtered = Set<Translation>()
-        eachMatch(searchText, text: eoWords) { eo in
-            if let translation = self.translationsByEo[eo] {
-                filtered.insert(translation)
-            }
-        }
-        eachMatch(searchText, text: enWords) { en in
-            if let translations = self.translationsByEn[en] {
-                for translation in translations {
-                    filtered.insert(translation)
-                }
-            }
-        }
+        let filtered = Set(searchEo(searchText) + searchEn(searchText))
         return filtered.sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
     }
 
@@ -202,7 +191,7 @@ class MasterViewController: UITableViewController {
         if indexPath.row < translations().count {
             let object = translations()[indexPath.row]
             cell.textLabel?.text = object.eo
-            cell.detailTextLabel?.text = object.en
+            cell.detailTextLabel?.text = object.ens.joinWithSeparator(", ")
         }
         return cell
     }
