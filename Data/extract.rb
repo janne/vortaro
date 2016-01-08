@@ -21,7 +21,7 @@ for line in lines
   end
 end
 
-File.open("eo_to_ens.json", "w") { |f| f.write(eo_to_ens.to_json) }
-File.open("en_to_eos.json", "w") { |f| f.write(en_to_eos.to_json) }
-File.open("eos.txt", "w") { |f| f.write(eo_to_ens.keys.sort_alphabetical.join("\n")) }
-File.open("ens.txt", "w") { |f| f.write(en_to_eos.keys.sort_alphabetical.join("\n")) }
+File.open("../Vortaro/eo_to_ens.json", "w") { |f| f.write(eo_to_ens.to_json) }
+File.open("../Vortaro/en_to_eos.json", "w") { |f| f.write(en_to_eos.to_json) }
+File.open("../Vortaro/eos.txt", "w") { |f| f.write(eo_to_ens.keys.sort_alphabetical.join("\n")) }
+File.open("../Vortaro/ens.txt", "w") { |f| f.write(en_to_eos.keys.sort_alphabetical.join("\n")) }
