@@ -12,16 +12,15 @@ enum WordClass {
     case Phrase, Suffix, Prefix, Preposition, Pronoun, Numeral, Particle, Adverb, Verb, Noun, Adjective, Correlative, Other
 }
 
-typealias GrammarResult = (String, [String])
-
 class Translation : Hashable {
     var hashValue : Int { return eo.hashValue }
     var eo: String
     var ens: [String]
     var wordClass: WordClass?
-    var base: String?
     var parts: [String]?
-    let pronouns = ["ambaŭ", "ili", "li", "mi", "ni", "oni", "si", "vi", "ĝi", "ŝi"]
+    var base: String {
+        return parts?.first ?? ""
+    }
     let prepositions = ["al", "anstataŭ", "antaŭ", "apud", "cis", "ĉe", "ĉirkaŭ", "da", "de", "disde", "dum", "ekde", "ekster", "el", "en", "estiel", "far", "for", "graŭ", "ĝis", "inter", "je", "kiel", "kontraŭ", "krom", "kun", "laŭ", "malantaŭ", "malapud", "malgraŭ", "malsupre", "meze", "na", "per", "po", "por", "post", "preter", "pri", "pro", "proksime", "samkiel", "sen", "sob", "sub", "super", "sur", "tra", "trans"]
     let particles = ["ajn", "almenaŭ", "ankaŭ", "apenaŭ", "eĉ", "hoj", "ja", "jam", "jes", "kaj", "ke", "kvankam", "kvazaŭ", "malpli", "malplej", "mem", "nek", "nur", "ol", "plej", "pli", "plu", "se", "sed", "tamen", "tre", "tro", "tuj", "ĉar", "ĉi", "ĵus"]
     let adverbs = ["baldaŭ", "hieraŭ", "hodiaŭ", "morgaŭ", "nun", "postmorgaŭ", "preskaŭ"]
@@ -93,13 +92,15 @@ class Translation : Hashable {
         if let wc = wordClass {
             switch wc {
             case .Verb:
-                s += "<p>\(verbTable(base!))</p>"
+                s += "<p>\(verbTable())</p>"
             case .Noun:
-                s += "<p>\(caseTable(base! + "o"))</p>"
+                s += "<p>\(caseTable(base + "o"))</p>"
             case .Adjective:
-                s += "<p>\(caseTable(base! + "a"))</p>"
+                s += "<p>\(caseTable(base + "a"))</p>"
             case .Correlative:
                 s += "<p>\(correlativeTable())</p>"
+            case .Pronoun:
+                s += "<p>\(pronounTable())</p>"
             default:
                 false
             }
@@ -130,8 +131,6 @@ class Translation : Hashable {
             wordClass = .Prefix
         } else if prepositions.contains(eo.lowercaseString) {
             wordClass = .Preposition
-        } else if pronouns.contains(eo.lowercaseString) {
-            wordClass = .Pronoun
         } else if numerals().contains(eo.lowercaseString) {
             wordClass = .Numeral
         } else if particles.contains(eo.lowercaseString) {
@@ -140,70 +139,72 @@ class Translation : Hashable {
             wordClass = .Adverb
         } else if correlatives.contains(eo.lowercaseString) {
             wordClass = .Correlative
-        } else if let (base, parts) = partsByPattern("en?!?$") {
+        } else if let parts = partsByPattern("^(mi|ni|vi|li|ŝi|ĝi|ili|oni|si|ci)(a?)(n?)$") {
+            self.parts = parts
+            wordClass = .Pronoun
+        } else if let parts = partsByPattern("^(.*)(e)(n?)!?$") {
             wordClass = .Adverb
-            self.base = base
             self.parts = parts
-        } else if let (base, parts) = partsByPattern("i$") {
+        } else if let parts = partsByPattern("^(.*)(i|as|is|os|us|u)!?$") {
             wordClass = .Verb
-            self.base = base
             self.parts = parts
-        } else if let (base, parts) = partsByPattern("oj?n?!?$") {
+        } else if let parts = partsByPattern("^(.*)(o)(j?)(n?)!?$") {
             wordClass = .Noun
-            self.base = base
             self.parts = parts
-        } else if let (base, parts) = partsByPattern("aj?n?$") {
+        } else if let parts = partsByPattern("^(.*)(a)(j?)(n?)$") {
             wordClass = .Adjective
-            self.base = base
             self.parts = parts
         } else {
             wordClass = .Other
         }
     }
 
-    func match(pattern: String) -> Range<String.Index>? {
-        return eo.rangeOfString(pattern, options: [.RegularExpressionSearch, .CaseInsensitiveSearch])
+    func matches(pattern: String) -> NSTextCheckingResult? {
+        let regex = try! NSRegularExpression(pattern: pattern, options: [.CaseInsensitive])
+        let matches = regex.matchesInString(eo, options: [], range: NSMakeRange(0, (eo as NSString).length))
+        return matches.first
     }
 
-    func partsByPattern(pattern: String) -> GrammarResult? {
-        if let range = match(pattern) {
-            let base = eo[eo.startIndex..<range.startIndex]
-            if base.characters.count > 0 {
-                var parts = [base]
-                for char in eo[range.startIndex..<eo.endIndex].characters {
-                    parts.append(String(char))
+    func partsByPattern(pattern: String) -> [String]? {
+        if let matches = matches(pattern) {
+            var parts = [String]()
+            for var i = 1; i < matches.numberOfRanges; i++ {
+                if let range = eo.rangeFromNSRange(matches.rangeAtIndex(i)) {
+                    if !range.isEmpty {
+                        parts.append(eo[range])
+                    }
                 }
-                return (base, parts)
             }
+            return parts
         }
-        return .None
+        return nil
     }
 
     func isPhrase() -> Bool {
-        return match(" ") != .None
+        return matches(" ") != .None
     }
 
     func isSuffix() -> Bool {
-        return match("^-") != .None
+        return matches("^-") != .None
     }
 
     func isPrefix() -> Bool {
-        return match("^[^-].*-$") != .None
+        return matches("^[^-].*-$") != .None
     }
 
-    func verbTable(base: String) -> String {
+    func verbTable() -> String {
         return "<table>"
             + "<tr><th>Tempo</th><th>Vortformo</th><th>Aktiva Voĉo</th><th>Pasiva Voĉo</th></tr>"
-            + "<tr><td><b>Prezenco</b></td><td>\(base)as</td><td>\(base)anta</td><td>\(base)ata</td></tr>"
-            + "<tr><td><b>Preterito</b></td><td>\(base)is</td><td>\(base)inta</td><td>\(base)ita</td></tr>"
-            + "<tr><td><b>Futuro</b></td><td>\(base)os</td><td>\(base)onta</td><td>\(base)ota</td></tr>"
-            + "<tr><td><b>Kondicionalo</b></td><td>\(base)us</td><td>\(base)unta</td><td>\(base)uta</td></tr>"
-            + "<tr><td><b>Imperativo</b></td><td>\(base)u</td></tr>"
+            + "<tr><td><b>Prezenco</b></td><td>\(j(base + "as"))</td><td>\(j(base + "anta"))</td><td>\(j(base + "ata"))</td></tr>"
+            + "<tr><td><b>Preterito</b></td><td>\(j(base + "is"))</td><td>\(j(base + "inta"))</td><td>\(j(base + "ita"))</td></tr>"
+            + "<tr><td><b>Futuro</b></td><td>\(j(base + "os"))</td><td>\(j(base + "onta"))</td><td>\(j(base + "ota"))</td></tr>"
+            + "<tr><td><b>Kondicionalo</b></td><td>\(j(base + "us"))</td><td>\(j(base + "unta"))</td><td>\(j(base + "uta"))</td></tr>"
+            + "<tr><td><b>Imperativo</b></td><td>\(j(base + "u"))</td></tr>"
             + "</table>"
     }
 
     func j(word: String) -> String {
-        if word == eo {
+        if word == parts?.joinWithSeparator("") {
             return "<b><u>\(word)</u></b>"
         }
         return word
@@ -215,6 +216,14 @@ class Translation : Hashable {
             + "<tr><td><b>Nominativo</b></td><td>\(j(base))</td><td>\(j(base + "j"))</td></tr>"
             + "<tr><td><b>Akuzativo</b></td><td>\(j(base + "n"))</td><td>\(j(base + "jn"))</td></tr>"
             + "</table>"
+    }
+
+    func pronounTable() -> String {
+        return "<table>"
+        + "<tr><th></th><th>Personaj</th><th>Posedaj</th></tr>"
+        + "<tr><th>Nominativo</th><td>\(j(base))</td><td>\(j(base + "a"))</td></tr>"
+        + "<tr><th>Akuzativo</th><td>\(j(base + "n"))</td><td>\(j(base + "an"))</td></tr>"
+        + "</table>"
     }
 
     func correlativeTable() -> String {
