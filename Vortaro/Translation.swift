@@ -57,7 +57,7 @@ class Translation : Hashable {
         var s = eo
         if let p = parts {
             if p.count > 1 {
-                s = p.joinWithSeparator("/")
+                s = p.joinWithSeparator(" + ")
             }
         }
         return "<h3>Esperantlingva</h3><p>\(s)</p>"
