@@ -72,15 +72,15 @@ class MasterViewController: UITableViewController {
     }
 
     func searchEn(searchText: String) -> [Translation] {
-        var filtered = [Translation]()
+        var filtered = Set<Translation>()
         eachMatch(searchText, text: enWords) { en in
             if let eos = self.enToEos[en] {
                 for eo in eos {
-                    filtered.append(Translation(eo: eo, ens: self.eoToEns[eo] ?? []))
+                    filtered.insert(Translation(eo: eo, ens: self.eoToEns[eo] ?? []))
                 }
             }
         }
-        return filtered
+        return Array(filtered)
     }
 
     func searchEo(searchText: String) -> [Translation] {
@@ -95,7 +95,7 @@ class MasterViewController: UITableViewController {
 
     func searchBoth(searchText: String) -> [Translation] {
         let filtered = Set(searchEo(searchText) + searchEn(searchText))
-        return filtered.sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
+        return Array(filtered)
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
@@ -105,9 +105,9 @@ class MasterViewController: UITableViewController {
             } else if scope == "Esperanto" {
                 self.filteredObjects = self.searchEo(searchText)
             } else if scope == "English" {
-                self.filteredObjects = self.searchEn(searchText)
+                self.filteredObjects = self.searchEn(searchText).sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
             } else {
-                self.filteredObjects = self.searchBoth(searchText)
+                self.filteredObjects = self.searchBoth(searchText).sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
             }
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
