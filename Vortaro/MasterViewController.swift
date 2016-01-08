@@ -41,17 +41,6 @@ class MasterViewController: UITableViewController {
     }
 
 
-    func readWordList() {
-        enWords = readText("ens")
-        eoWords = readText("eos")
-        enToEos = readJSON("en_to_eos")
-        eoToEns = readJSON("eo_to_ens")
-
-        for eo in eoWords.componentsSeparatedByString("\n") {
-            objects.append(Translation(eo: eo, ens: eoToEns[eo] ?? []))
-        }
-    }
-
     func buildRegexp(var pattern: String) -> NSRegularExpression? {
         let replacements = [
             "c": "ĉ",
@@ -128,7 +117,20 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        readWordList()
+
+        eoWords = readText("eos")
+        eoToEns = readJSON("eo_to_ens")
+        for eo in eoWords.componentsSeparatedByString("\n") {
+            objects.append(Translation(eo: eo, ens: eoToEns[eo] ?? []))
+        }
+
+        dispatch_async(queue) {
+            self.enWords = self.readText("ens")
+            self.enToEos = self.readJSON("en_to_eos")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.tableView.reloadData()
+            }
+        }
 
         searchController.searchResultsUpdater = self
         searchController.dimsBackgroundDuringPresentation = false
