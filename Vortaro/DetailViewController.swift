@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
 
     var detailItem: Translation? {
@@ -26,9 +26,17 @@ class DetailViewController: UIViewController {
         }
     }
 
+    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if navigationType == .LinkClicked {
+            UIApplication.sharedApplication().openURL(request.URL!)
+            return false
+        }
+        return true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView.delegate = self
         self.configureView()
     }
 }
-
