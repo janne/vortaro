@@ -119,6 +119,8 @@ class Translation : Hashable {
             + "</li><li>"
             + "<a href='https://translate.google.com/#eo/en/\(eo)'>Google Translate</a>"
             + "(<a href='https://translate.google.com/#en/eo/\(ens.first!)'>en</a>)"
+            + "</li><li>"
+            + "<a href='http://www.simplavortaro.org/vorto/\(eo)'>La Simpla Vortaro</a>"
             + "</li></ul>"
     }
 
