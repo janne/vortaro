@@ -139,6 +139,7 @@ class MasterViewController: UITableViewController {
 
         searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Both"]
         searchController.searchBar.delegate = self
+        searchController.searchBar.becomeFirstResponder()
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
