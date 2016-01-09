@@ -67,7 +67,7 @@ class Translation : Hashable {
         if ens.count > 1 {
             ens_list = "<ul>" + ens.map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
         } else {
-            ens_list = "<p>\(ens.first ?? "")</p>"
+            ens_list = "<p>\(ens.first!)</p>"
         }
         return "<h3>Anglalingva</h3>"
             + ens_list
@@ -112,13 +112,13 @@ class Translation : Hashable {
         return "<h3>Retligiloj</h3>"
             + "<ul><li>"
             + "<a href='https://eo.m.wikipedia.org/wiki/\(eo)'>Vikipedio</a>"
-            + "(<a href='https://en.m.wikipedia.org/wiki/\(ens.first)'>en</a>)"
+            + "(<a href='https://en.m.wikipedia.org/wiki/\(ens.first!)'>en</a>)"
             + "</li><li>"
             + "<a href='https://eo.m.wiktionary.org/wiki/\(eo)'>Vikivortaro</a>"
-            + "(<a href='https://en.m.wiktionary.org/wiki/\(ens.first)'>en</a>)"
+            + "(<a href='https://en.m.wiktionary.org/wiki/\(ens.first!)'>en</a>)"
             + "</li><li>"
             + "<a href='https://translate.google.com/#eo/en/\(eo)'>Google Translate</a>"
-            + "(<a href='https://translate.google.com/#en/eo/\(ens.first)'>en</a>)"
+            + "(<a href='https://translate.google.com/#en/eo/\(ens.first!)'>en</a>)"
             + "</li></ul>"
     }
 
