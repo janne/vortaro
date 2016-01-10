@@ -143,6 +143,7 @@ class MasterViewController: UITableViewController {
                 let word = words[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
                 let translation = Translation(fromLanguage: fromLanguage, fromWord: word, toWords: toWords(word))
+                controller.eoToEns = eoToEns
                 controller.detailItem = translation
                 controller.title = word
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()

@@ -10,6 +10,7 @@ import UIKit
 
 class DetailViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var webView: UIWebView!
+    var eoToEns = [String: [String]]()
 
     var detailItem: Translation? {
         didSet {
@@ -28,8 +29,19 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
 
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if navigationType == .LinkClicked {
-            UIApplication.sharedApplication().openURL(request.URL!)
-            return false
+            if let url = request.URL {
+                if let _ = String(url).rangeOfString("^vortaro:", options: .RegularExpressionSearch) {
+                    if let eo = String(url).componentsSeparatedByString(":")[1].stringByRemovingPercentEncoding {
+                        if let ens = eoToEns[eo] {
+                            title = eo
+                            detailItem = Translation(fromLanguage: "Esperanto", fromWord: eo, toWords: ens)
+                        }
+                    }
+                } else {
+                    UIApplication.sharedApplication().openURL(url)
+                }
+                return false
+            }
         }
         return true
     }

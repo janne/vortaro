@@ -47,16 +47,15 @@ class Translation {
             if wordClass == .None {
                 analyze()
             }
-            return toWords("Anglalingva")
+            return toWords("Anglalingva", withLinks: false)
                 + fromWord("Esperantlingva")
                 + grammar()
                 + links()
         } else {
-            return toWords("Esperanto")
+            return toWords("Esperanto", withLinks: true)
                 + fromWord("English")
         }
     }
-
 
     func fromWord(title: String) -> String {
         var s = fromWord
@@ -68,15 +67,18 @@ class Translation {
         return "<h3>\(title)</h3><p>\(s)</p>"
     }
 
-    func toWords(title: String) -> String {
-        let toWordList: String
-        if toWords.count > 1 {
-            toWordList = "<ul>" + toWords.map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
+    func toWords(title: String, withLinks: Bool) -> String {
+        var words: [String]
+        if withLinks {
+            words = toWords.map { word in "<a href='vortaro:\(word)'>\(word)</a>" }
         } else {
-            toWordList = "<p>\(toWords.first!)</p>"
+            words = toWords
         }
-        return "<h3>\(title)</h3>"
-            + toWordList
+        if toWords.count > 1 {
+            return "<h3>\(title)</h3><ul>" + words.map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
+        } else {
+            return "<h3>\(title)</h3><p>\(words.first!)</p>"
+        }
     }
 
     func grammar() -> String {
