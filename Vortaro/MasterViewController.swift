@@ -12,10 +12,12 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     let searchController = UISearchController(searchResultsController: nil)
-    var objects = [Translation]()
-    var filteredObjects = [Translation]()
-    var eoWords: NSString = ""
-    var enWords: NSString = ""
+    var fromLanguage = "Esperanto"
+    var eoWords = [String]()
+    var enWords = [String]()
+    var words = [String]()
+    var eoText: NSString = ""
+    var enText: NSString = ""
     var enToEos = [String: [String]]()
     var eoToEns = [String: [String]]()
     let queue = dispatch_queue_create("serial-worker", DISPATCH_QUEUE_SERIAL)
@@ -61,54 +63,36 @@ class MasterViewController: UITableViewController {
         }
     }
 
-    func eachMatch(pattern: String, text: NSString, fn: (String -> ())) {
+    func findMatches(pattern: String, text: NSString) -> [String] {
         if let regex = buildRegexp(pattern) {
             let matches = regex.matchesInString(text as String, options: [], range: NSMakeRange(0, text.length))
-            for match in matches.prefix(10000) {
+            return matches.prefix(10000).map { match in
                 let range = text.lineRangeForRange(match.range)
-                fn(text.substringWithRange(range).trim())
+                return text.substringWithRange(range).trim()
             }
         }
-    }
-
-    func searchEn(searchText: String) -> [Translation] {
-        var filtered = Set<Translation>()
-        eachMatch(searchText, text: enWords) { en in
-            if let eos = self.enToEos[en] {
-                for eo in eos {
-                    filtered.insert(Translation(eo: eo, ens: self.eoToEns[eo] ?? []))
-                }
-            }
-        }
-        return Array(filtered)
-    }
-
-    func searchEo(searchText: String) -> [Translation] {
-        var filtered = [Translation]()
-        eachMatch(searchText, text: eoWords) { eo in
-            if let ens = self.eoToEns[eo] {
-                filtered.append(Translation(eo: eo, ens: ens))
-            }
-        }
-        return filtered
-    }
-
-    func searchBoth(searchText: String) -> [Translation] {
-        let filtered = Set(searchEo(searchText) + searchEn(searchText))
-        return Array(filtered)
+        return []
     }
 
     func filterContentForSearchText(searchText: String, scope: String = "Esperanto") {
         dispatch_async(queue) {
-            if searchText == "" {
-                self.filteredObjects = self.objects
-            } else if scope == "Esperanto" {
-                self.filteredObjects = self.searchEo(searchText)
-            } else if scope == "English" {
-                self.filteredObjects = self.searchEn(searchText).sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
+            self.fromLanguage = scope
+            var text: NSString
+            var words: [String]
+            if scope == "Esperanto" {
+                text = self.eoText
+                words = self.eoWords
             } else {
-                self.filteredObjects = self.searchBoth(searchText).sort { $0.eo.lowercaseString < $1.eo.lowercaseString }
+                text = self.enText
+                words = self.enWords
             }
+
+            if searchText == "" {
+                self.words = words
+            } else {
+                self.words = self.findMatches(searchText, text: text)
+            }
+
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -118,15 +102,14 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        eoWords = readText("eos")
+        eoText = readText("eos")
         eoToEns = readJSON("eo_to_ens")
-        for eo in eoWords.componentsSeparatedByString("\n") {
-            objects.append(Translation(eo: eo, ens: eoToEns[eo] ?? []))
-        }
+        eoWords = eoText.componentsSeparatedByString("\n")
 
         dispatch_async(queue) {
-            self.enWords = self.readText("ens")
+            self.enText = self.readText("ens")
             self.enToEos = self.readJSON("en_to_eos")
+            self.enWords = self.enText.componentsSeparatedByString("\n")
             dispatch_async(dispatch_get_main_queue()) {
                 self.tableView.reloadData()
             }
@@ -137,7 +120,7 @@ class MasterViewController: UITableViewController {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
 
-        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English", "Both"]
+        searchController.searchBar.scopeButtonTitles = ["Esperanto", "English"]
         searchController.searchBar.delegate = self
         searchController.searchBar.becomeFirstResponder()
 
@@ -157,13 +140,22 @@ class MasterViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = translations()[indexPath.row]
+                let word = words[indexPath.row]
                 let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.title = object.eo
+                let translation = Translation(fromLanguage: fromLanguage, fromWord: word, toWords: toWords(word))
+                controller.detailItem = translation
+                controller.title = word
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
+        }
+    }
+
+    func toWords(word: String) -> [String] {
+        if fromLanguage == "Esperanto" {
+            return eoToEns[word] ?? []
+        } else {
+            return enToEos[word] ?? []
         }
     }
 
@@ -173,23 +165,16 @@ class MasterViewController: UITableViewController {
         return 1
     }
 
-    func translations() -> [Translation] {
-        if searchController.active && searchController.searchBar.text! != "" {
-            return filteredObjects
-        }
-        return objects
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return translations().count
+        return words.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        if indexPath.row < translations().count {
-            let object = translations()[indexPath.row]
-            cell.textLabel?.text = object.eo
-            cell.detailTextLabel?.text = object.ens.joinWithSeparator(", ")
+        if indexPath.row < words.count {
+            let fromWord = words[indexPath.row]
+            cell.textLabel?.text = fromWord
+            cell.detailTextLabel?.text = toWords(fromWord).joinWithSeparator(", ")
         }
         return cell
     }

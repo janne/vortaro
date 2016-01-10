@@ -12,10 +12,10 @@ enum WordClass {
     case Phrase, Suffix, Prefix, Preposition, Pronoun, Numeral, Particle, Adverb, Verb, Noun, Adjective, Correlative, Other
 }
 
-class Translation : Hashable {
-    var hashValue : Int { return eo.hashValue }
-    var eo: String
-    var ens: [String]
+class Translation {
+    var fromWord: String
+    var toWords: [String]
+    var fromLanguage: String
     var wordClass: WordClass?
     var parts: [String]?
     var base: String {
@@ -36,41 +36,47 @@ class Translation : Hashable {
         return c
     }
 
-    init(eo: String, ens: [String]) {
-        self.eo = eo
-        self.ens = ens
+    init(fromLanguage: String, fromWord: String, toWords: [String]) {
+        self.fromLanguage = fromLanguage
+        self.fromWord = fromWord
+        self.toWords = toWords
     }
 
     func description() -> String {
-        if wordClass == .None {
-            analyze()
+        if fromLanguage == "Esperanto" {
+            if wordClass == .None {
+                analyze()
+            }
+            return toWords("Anglalingva")
+                + fromWord("Esperantlingva")
+                + grammar()
+                + links()
+        } else {
+            return toWords("Esperanto")
+                + fromWord("English")
         }
-        return inEnglish()
-            + inEsperanto()
-            + grammar()
-            + links()
     }
 
 
-    func inEsperanto() -> String {
-        var s = eo
+    func fromWord(title: String) -> String {
+        var s = fromWord
         if let p = parts {
             if p.count > 1 {
                 s = p.joinWithSeparator(" + ")
             }
         }
-        return "<h3>Esperantlingva</h3><p>\(s)</p>"
+        return "<h3>\(title)</h3><p>\(s)</p>"
     }
 
-    func inEnglish() -> String {
-        let ens_list: String
-        if ens.count > 1 {
-            ens_list = "<ul>" + ens.map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
+    func toWords(title: String) -> String {
+        let toWordList: String
+        if toWords.count > 1 {
+            toWordList = "<ul>" + toWords.map{ "<li>\($0)</li>" }.joinWithSeparator("") + "</ul>"
         } else {
-            ens_list = "<p>\(ens.first!)</p>"
+            toWordList = "<p>\(toWords.first!)</p>"
         }
-        return "<h3>Anglalingva</h3>"
-            + ens_list
+        return "<h3>\(title)</h3>"
+            + toWordList
     }
 
     func grammar() -> String {
@@ -111,16 +117,16 @@ class Translation : Hashable {
     func links() -> String {
         return "<h3>Retligiloj</h3>"
             + "<ul><li>"
-            + "<a href='https://eo.m.wikipedia.org/wiki/\(eo)'>Vikipedio</a>"
-            + "(<a href='https://en.m.wikipedia.org/wiki/\(ens.first!)'>en</a>)"
+            + "<a href='https://eo.m.wikipedia.org/wiki/\(fromWord)'>Vikipedio</a>"
+            + "(<a href='https://en.m.wikipedia.org/wiki/\(toWords.first!)'>en</a>)"
             + "</li><li>"
-            + "<a href='https://eo.m.wiktionary.org/wiki/\(eo)'>Vikivortaro</a>"
-            + "(<a href='https://en.m.wiktionary.org/wiki/\(ens.first!)'>en</a>)"
+            + "<a href='https://eo.m.wiktionary.org/wiki/\(fromWord)'>Vikivortaro</a>"
+            + "(<a href='https://en.m.wiktionary.org/wiki/\(toWords.first!)'>en</a>)"
             + "</li><li>"
-            + "<a href='https://translate.google.com/#eo/en/\(eo)'>Google Translate</a>"
-            + "(<a href='https://translate.google.com/#en/eo/\(ens.first!)'>en</a>)"
+            + "<a href='https://translate.google.com/#eo/en/\(fromWord)'>Google Translate</a>"
+            + "(<a href='https://translate.google.com/#en/eo/\(toWords.first!)'>en</a>)"
             + "</li><li>"
-            + "<a href='http://www.simplavortaro.org/vorto/\(eo)'>La Simpla Vortaro</a>"
+            + "<a href='http://www.simplavortaro.org/vorto/\(fromWord)'>La Simpla Vortaro</a>"
             + "</li></ul>"
     }
 
@@ -131,15 +137,15 @@ class Translation : Hashable {
             wordClass = .Suffix
         } else if isPrefix() {
             wordClass = .Prefix
-        } else if prepositions.contains(eo.lowercaseString) {
+        } else if prepositions.contains(fromWord.lowercaseString) {
             wordClass = .Preposition
-        } else if numerals().contains(eo.lowercaseString) {
+        } else if numerals().contains(fromWord.lowercaseString) {
             wordClass = .Numeral
-        } else if particles.contains(eo.lowercaseString) {
+        } else if particles.contains(fromWord.lowercaseString) {
             wordClass = .Particle
-        } else if adverbs.contains(eo.lowercaseString) {
+        } else if adverbs.contains(fromWord.lowercaseString) {
             wordClass = .Adverb
-        } else if correlatives.contains(eo.lowercaseString) {
+        } else if correlatives.contains(fromWord.lowercaseString) {
             wordClass = .Correlative
         } else if let parts = partsByPattern("^(mi|ni|vi|li|ŝi|ĝi|ili|oni|si|ci)(a?)(n?)$") {
             self.parts = parts
@@ -163,7 +169,7 @@ class Translation : Hashable {
 
     func matches(pattern: String) -> NSTextCheckingResult? {
         let regex = try! NSRegularExpression(pattern: pattern, options: [.CaseInsensitive])
-        let matches = regex.matchesInString(eo, options: [], range: NSMakeRange(0, (eo as NSString).length))
+        let matches = regex.matchesInString(fromWord, options: [], range: NSMakeRange(0, (fromWord as NSString).length))
         return matches.first
     }
 
@@ -171,9 +177,9 @@ class Translation : Hashable {
         if let matches = matches(pattern) {
             var parts = [String]()
             for var i = 1; i < matches.numberOfRanges; i++ {
-                if let range = eo.rangeFromNSRange(matches.rangeAtIndex(i)) {
+                if let range = fromWord.rangeFromNSRange(matches.rangeAtIndex(i)) {
                     if !range.isEmpty {
-                        parts.append(eo[range])
+                        parts.append(fromWord[range])
                     }
                 }
             }
@@ -237,7 +243,7 @@ class Translation : Hashable {
         for s in correlative_suffixes {
             result += "<tr><td><b>-\(s.uppercaseString)</b></td>"
             for p in correlative_prefixes {
-                if p + s == eo {
+                if p + s == fromWord {
                     result += "<td><b><u>\(p + s)</u></b></td>"
                 } else {
                     result += "<td>\(p + s)</td>"
@@ -283,8 +289,4 @@ class Translation : Hashable {
         }
         return .None
     }
-}
-
-func ==(lhs: Translation, rhs: Translation) -> Bool {
-    return lhs.hashValue == rhs.hashValue
 }
