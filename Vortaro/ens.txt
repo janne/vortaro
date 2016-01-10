@@ -1,4 +1,3 @@
-
 "their" (proposed 3rd person neutral singular possesive pronoun)
 "they" (proposed 3rd person neutral singular pronoun)
 #
@@ -8,12 +7,14 @@
 ()
 (a) certain
 (a) fuck
-(a) pity, (a) shame
+(a) pity
 (a) regular (guest, customer, etc.)
-(a) whole, (a) unit
+(a) shame
+(a) unit
+(a) whole
 (a) worse thing
 (absolute) solfeggio
-(academic) major, concentration, main field of study
+(academic) major
 (accusative ending)
 (acknowledgment of) receipt
 (act of) cleverness
@@ -24,8 +25,8 @@
 (administrative) department
 (administrative) province
 (advertising) banner
-(air) balloon, aerostat
-(alcoholic) drink, booze
+(air) balloon
+(alcoholic) drink
 (American) basilisk
 (American) football
 (American) mink
@@ -33,8 +34,8 @@
 (an) armload
 (an) infinite number
 (annual) financial statement
-(apoplectic) fit, seizure, stroke, (stroke of) apoplexy
-(appearing) typewritten, type-like
+(apoplectic) fit
+(appearing) typewritten
 (arithmetic) table
 (army) corps
 (art of) cinema
@@ -42,7 +43,7 @@
 (as if) thunderstruck
 (asks a question)
 (at) the last time
-(at, of) midnight, midnight’s
+(at, of) midnight
 (Australian) aboriginal
 (bad) smell
 (bear) witness
@@ -50,18 +51,19 @@
 (black) pepper
 (body, surface) of revolution
 (boxing) ring
-(broad) axe, hatchet
+(broad) axe
 (burial) mound
-(by) retail, in detail
-(by) tearing, (by) ripping
-(cabinet) department, ministry
-(canon)ball, shot
+(by) retail
+(by) ripping
+(by) tearing
+(cabinet) department
+(canon)ball
 (cardiac) pacemaker
 (cause for) concern
 (cine) film
 (circumstantial) evidence
 (clothes) dryer
-(cock’s) comb, (mountain) ridge, crest
+(cock’s) comb
 (command)
 (common) cycloid
 (competent official) authority
@@ -69,16 +71,17 @@
 (computer) monitor
 (computer) spreadsheet
 (conditional or subjunctive ending)
-(cooking) pot, casserole
+(cooking) pot
 (cosmetic) powder
 (count of) ten
 (course of) treatment
 (crewneck) sweater
-(curly) brace, (curly) bracket
+(curly) brace
+(curly) bracket
 (cylinder) phonograph
 (debt) collection letter
 (deep) in one’s heart
-(Democratic Republic of) Timor-Leste, East Timor
+(Democratic Republic of) Timor-Leste
 (denotes a collection of persons or objects)
 (denotes a container, country formed from the name of its people, tree formed from name of its fruit)
 (denotes a disposition or inclination)
@@ -105,7 +108,7 @@
 (denotes possibility)
 (denotes present participle)
 (denotes remoteness in time, distant relationship)
-(denotes repetition of an act), re-
+(denotes repetition of an act)
 (denotes some undefined action or object related to the root)
 (denotes something possessing a certain quality or made from a certain substance, meat from a specific animal)
 (denotes something to be done or which must be done)
@@ -116,29 +119,30 @@
 (denotes worthiness, merit)
 (denotes young of, offspring)
 (dental) filling
-(device) adapter, (device) controller
+(device) adapter
+(device) controller
 (diaper) changing table
 (directional) bearing
 (dish) mop
-(disk) partition, disk slice
-(doing) well, fine, comfortable
+(disk) partition
+(doing) well
 (domain) name server
 (eagle) owl
-(earthenware) pot, jar, jug, crock
+(earthenware) pot
 (earthenware) vase
-(electric, ventilating) fan, ventilator
+(electric, ventilating) fan
 (electrical) generator
 (element) with an opposite
 (en, n) dash
 (encryption) key passphrase
 (English) daisy
 (Esperanto) World Congress
-(European
+(European, white) sturgeon
 (Father) Superior
 (Federated States of) Micronesia
-(feelings of) guilt, guilty feelings
+(feelings of) guilt
 (female) admirer
-(female) companion, living partner, roommate
+(female) companion
 (female) cousin
 (female) dancer
 (female) delegate
@@ -147,7 +151,7 @@
 (female) thief
 (female) typist
 (film, movie, video) camera
-(fireplace) mantle, mantelpiece
+(fireplace) mantle
 (fireplace) poker
 (for) commercial (use, purposes)
 (fore)warn
@@ -166,48 +170,48 @@
 (gun) carriage
 (hand) towel
 (hard) palate
-(having to do with a) garden, gardening
+(having to do with a) garden
 (head of) hair
 (helicopter) gunship
 (high school) exit examination
-(hob)goblin, gnome, imp, sprite, elf, kobold
+(hob)goblin
 (holy) Mass
 (hooded) crow
-(hypodermic) needle, syringe, injector
-(illegal) drug, narcotic
+(hypodermic) needle
+(illegal) drug
 (illustrita) illustrated
 (imperative form)
-(Indian) corn, maize
+(Indian) corn
 (Indian) dancing-girl
 (indicates full of, rich in)
 (indicates the masculine sex)
 (individual) grain
 (industrial) lockout
 (instrument of) defense
-(instrument of) mass media, mass communication
+(instrument of) mass media
 (interjection)
 (interjection) encore
 (internet) access provider
 (intestinal) roundworm
-(invitation to) tender, adjudication
+(invitation to) tender
 (involuntary) nocturnal emission
 (iron-)reinforced concrete
 (ivy, star) duckweed
-(kaj tiel plu) et cetera, etc.
+(kaj tiel plu) et cetera
 (keynote) speech
-(kompakta disko) CD, compact disc
+(kompakta disko) CD
 (large) wall
 (law) minor
 (legal) document
 (lifting) jack
-(light) bulb, ampoule, ampulla
+(light) bulb
 (made of) pine
 (made of) rice straw
 (made) of paper
 (make) smooth
 (male) cousin
 (male) typist
-(mathematical) average, mean
+(mathematical) average
 (mental) image
 (metal) wire
 (metric) ton
@@ -218,6 +222,7 @@
 (Mount) Tabor
 (mountain) climber
 (mountain) pass
+(mountain) ridge
 (musical) scale
 (near, close) presence
 (new, nickel) silver
@@ -225,20 +230,20 @@
 (noun ending, plural)
 (noun ending, singular)
 (nuclear) fission
-(nurlegebla memoro) read-only memory, ROM
+(nurlegebla memoro) read-only memory
 (of a ) full moon
-(of a) pocket, portable
+(of a) pocket
 (oil) tanker
-(on the) contrary, conversely, vice versa
+(on the) contrary
 (on) our way
 (on) the next day
-(one and) only, sole, unique, single, singular
+(one and) only
 (opinion) poll
 (or) else
-(Original-Aparata Fabrikanto), OEM
-(ornamental) modeling, molding
+(Original-Aparata Fabrikanto)
+(ornamental) modeling
 (out) of
-(outer) space, cosmos, universe
+(outer) space
 (pair of) compasses
 (past tense)
 (perfect particle)
@@ -252,41 +257,42 @@
 (piece of) junk
 (piece of) paper
 (piece of) terracotta pottery
-(piece of, item of) china, porcelain
-(pine) cone, strobilus
+(piece of, item of) china
+(pine) cone
 (place used for an action or object)
 (place) blame
 (plej granda komuna divizoro) GCD (greatest common denominator)
 (plural ending)
 (point) of adherence
 (point) of closure
-(point) of inflection, flex (point)
+(point) of inflection
 (police) raid
 (Pontius) Pilate
 (postage) stamp
-(postskribo) postscript, PS
-(pot) cover, lid
+(postskribo) postscript
+(pot) cover
 (power of) attraction
-(power of) imagination, ability to imagine
-(power of) sight, vision
+(power of) imagination
+(power of) sight
 (prefix used to form word of opposite meaning)
 (premeditated) murder
 (preposition with no fixed meaning)
 (private) oratory
 (probability) distribution function
-(proper) motion, (proper) movement, displacement
-(protective) cover, wrapping, coating
+(proper) motion
+(proper) movement
+(protective) cover
 (public) tender
 (push)cart
 (puts emphasis on the noun or pronoun it follows)
 (quantity) of
 (railroad) train
-(railway) station house, terminal
+(railway) station house
 (railway) switch
 (re)mover
 (reflexive pronoun)
 (regional, foreign) accent
-(religious) service, worship service, church service, divine service
+(religious) service
 (Republic of) Macedonia
 (Republic of) Maldives
 (Republic of) Nauru
@@ -294,7 +300,7 @@
 (Republic of) Zimbabwe
 (retirement) pension
 (road, highway) intersection
-(Ruĝa-Verda-Blua) RGB, Red-Green-Blue
+(Ruĝa-Verda-Blua) RGB
 (Saint) Valentine's Day
 (sea)gull
 (secret love) affair
@@ -303,18 +309,19 @@
 (sense of) touch
 (set of) dishes
 (sexual) frigidity
-(sexual) love, sex
-(sheep)fold, (sheep) pen
+(sexual) love
+(sheep) pen
+(sheep)fold
 (shows male sex)
 (shows that the action has not yet been started)
 (shows that the action is finished, completed)
 (shows that the action is still in progress, the state is still applicable)
 (single) hair
-(small) advertisement, want ad
-(small) chapel, shrine
+(small) advertisement
+(small) chapel
 (software)
 (software) patch
-(someone’s) double, look-a-like
+(someone’s) double
 (sound of) striking (of a clock)
 (sound of) thunder
 (sound) baffle
@@ -322,13 +329,14 @@
 (soup) tureen
 (spiced) anchovy
 (sponge) mop
-(state of being) incognito, anonymity
+(state of being) incognito
 (stone) chippings
 (strand of) beads
 (street) market
+(stroke of) apoplexy
 (suffix diminishing meaning of root)
-(super)collider, particle accelerator, accelerator, gas pedal
-(Sydenham’s) chorea, Saint Vitus’s dance
+(super)collider
+(Sydenham’s) chorea
 (system of) arrangement
 (take a) census
 (take) care
@@ -338,44 +346,43 @@
 (the isle of) Korea
 (the) abyss
 (the) eightfold path (of Buddhism)
-(the) self, one’s self
+(the) self
 (theatrical) tour
-(ticket) window, counter
-(time of) youth, childhood
+(ticket) window
+(time of) youth
 (tin) foil
 (to the) left of
 (total) abstinence
 (tourist) attraction
 (trading) agency
-(Tut-Tera Teksaĵo) WWW, worldwide web, web
+(Tut-Tera Teksaĵo) WWW
 (unflattering, teasing, mocking) nickname
-(universala seria buso) USB, universal serial bus
+(universala seria buso) USB
 (university) campus
-(upper) limit, maximum
+(upper) limit
 (used to form diminutives with feminine names)
 (used to form diminutives with masculine names)
 (variant form of sep)
 (vidu) see
-(waiting) line, queue
+(waiting) line
 (wall)paper hanger
 (well) known
 (well-)fitting
 (wheat) field
-(while) being, when one was
+(while) being
 (white) arsenic
 (wild) celery
-(willow) grouse, willow ptarmigan
+(willow) grouse
 (window) shutter
-(woman’s) scarf; arm-sling, sash, stole
+(woman’s) scarf; arm-sling
 (woman’s) suspender
 (wooden) splinter
-(word of) goodbye, saying goodbye
+(word of) goodbye
 (word) wrap on
 -ish
 -less
 .cab file
 .csv
-1/100 of a krona)
 144
 2-crown piece (Swedish coin)
 22-year-old
@@ -392,7 +399,6 @@ a bit
 a bungling photographer
 a capella
 a cold
-a compartment of Gehenna)
 a completely different matter
 a courtesy
 a Dane
@@ -467,7 +473,7 @@ aback
 abacterial
 abactio
 abacus
-Abaddon (biblical
+Abaddon (biblical, a compartment of Gehenna)
 abaft
 abalienation
 abalone
@@ -551,6 +557,7 @@ abietin
 abietin acid
 ability
 ability to hear
+ability to imagine
 ability to live
 ability to look across
 ability to read
@@ -845,7 +852,7 @@ acceptingly
 acceptor
 accerlerative
 access
-access (database
+access (database, disk)
 access balcony
 access code
 access control
@@ -979,7 +986,7 @@ accuser
 accustomed
 accustomed to
 ace
-ace (cards
+ace (cards, etc.)
 Acehnese
 acenaphthene
 acephalan
@@ -1740,6 +1747,7 @@ aerophysics
 aeroscope
 aerosol
 aerospace
+aerostat
 aerostatic
 aerostatics
 aerotherapeutics
@@ -1896,7 +1904,7 @@ agaricoid
 agaricus (species of mushroom)
 agarwood
 agate
-agathis (genus of evergreens
+agathis (genus of evergreens, botany)
 Agathis dammara
 Agathocles
 agave
@@ -2183,7 +2191,6 @@ Aix-la-Chapelle
 ajar
 Ajax
 AK-47
-aka)
 akacia
 Akademio
 Akademio de Esperanto
@@ -2306,8 +2313,8 @@ Alex
 Alexander
 Alexander the Great
 Alexandria
-Alexandrian
 alexandrian
+Alexandrian
 Alexandrianism
 alexandrine
 alexandrine verse
@@ -2515,7 +2522,6 @@ allow
 allow for
 allowance
 allowance (ac)
-allowance)
 allowed
 alloy
 alloy of carbon with a metal
@@ -2881,8 +2887,8 @@ amphibole
 amphibology
 amphibrach
 amphibrachic
-amphictyon
 Amphictyon
+amphictyon
 amphictyonic
 amphictyony
 Amphimedon
@@ -2905,6 +2911,7 @@ amplifier
 amplitude
 amplitude regulator
 ampoule
+ampulla
 ampullaceous
 ampullary
 amputate
@@ -2938,7 +2945,6 @@ an interesting tidbit
 an interpreting bit of trivia
 an Italian family name
 an unwise thing
-an) unknown reason
 ana
 Anabaptism
 Anabaptist
@@ -3088,7 +3094,6 @@ and no one else
 and nothing else
 and others
 and so on
-and so on)
 and the following
 and throat specialist
 and yet
@@ -3181,8 +3186,8 @@ angioscope
 angiosperm
 angiospermatous
 angiospermous
-angle
 Angle
+angle
 angle at circumference
 angle bar
 angle bracket
@@ -3218,8 +3223,8 @@ Angola
 Angolan
 Angolese
 Angolian woman
-Angora
 angora
+Angora
 Angora cat
 angostura
 angrily
@@ -3292,7 +3297,7 @@ anisotropia
 anisotropic
 anizotropic
 Ankara
-ankaŭ konata kiel (also known as
+ankaŭ konata kiel (also known as, aka)
 ankh
 ankle
 ankle bone
@@ -3602,8 +3607,8 @@ antiphony
 antiphrase
 antipodal
 antipode(s)
-Antipodes
 antipodes
+Antipodes
 antipope
 antiproton
 antipsychotic
@@ -3780,8 +3785,8 @@ apocalyptic
 apocalyptically
 apochromatic
 apocope
-apocrypha
 Apocrypha
+apocrypha
 apocryphal
 apocryphally
 apocryphalness
@@ -3984,7 +3989,6 @@ approximate rhyme
 approximate value
 approximated quantity
 approximately
-approximately 71 cm)
 approximation
 approximation error
 appurtenant
@@ -4187,8 +4191,8 @@ archtreasurer
 archway
 arcose
 arctangent
-arctic
 Arctic
+arctic
 Arctic Circle
 Arctic Ocean
 arctic skua
@@ -4210,8 +4214,8 @@ area of expertise
 area of the world
 Areca
 arena
-areopagus
 Areopagus
+areopagus
 Ares
 argent
 argental
@@ -4219,8 +4223,8 @@ argentan
 argentic
 argentiferous
 Argentina
-Argentine
 argentine
+Argentine
 Argentinean
 Argentinean woman
 argentous
@@ -4351,7 +4355,6 @@ around mid-day
 around morning
 around the corner
 around the neck
-around)
 arousal
 arouse
 arouse interest
@@ -4404,7 +4407,7 @@ arsenical
 arsenide
 arsenious
 arsenite
-arshin (аршин – an obsolete Russian unit of length
+arshin (аршин – an obsolete Russian unit of length, approximately 71 cm)
 arsine
 arson
 arsonism
@@ -5131,8 +5134,8 @@ attendant
 attendants
 attention
 attention to detail
-Attention!
 attention!
+Attention!
 attentive
 attentively
 attentiveness
@@ -5140,8 +5143,8 @@ attenuation
 attenuator
 attest
 attestation
-Attic
 attic
+Attic
 Attica
 Atticism
 attire
@@ -5402,7 +5405,6 @@ automatism
 automaton
 automobile
 automobile tire
-automobile)
 automorphic
 automorphism
 automotive
@@ -5514,7 +5516,6 @@ away from
 away on business
 away we go
 away with
-away)
 awe
 awesome
 awful
@@ -6337,9 +6338,9 @@ bashfulness
 bashi-bazouk
 bashing
 Bashkir
-Basic
 BASIC
 basic
+Basic
 Basic English
 basic signal
 basic storage
@@ -6671,7 +6672,6 @@ be superabundant
 be superior in rank
 be superior to
 be surprised
-be suspended)
 be the boss of
 be tired
 be towed
@@ -6998,7 +6998,6 @@ being
 being overweight
 being quiet
 being together
-being)
 Beirut
 Belarus
 belaying pin
@@ -7028,8 +7027,8 @@ Belize
 Belizean
 Belizean lady
 Belizean woman
-bell
 Bell
+bell
 bell (ornament)
 bell button
 bell jar
@@ -7351,7 +7350,6 @@ bijective
 bijou
 bike
 bike bag
-bike)
 biker
 bikini
 Bikol
@@ -7735,8 +7733,8 @@ bladder-cherry
 bladder-nut
 bladderwort
 blade
-blade (knife
 blade (knife)
+blade (knife, etc.)
 blade of grass
 Blair Atholl
 blamable
@@ -8198,7 +8196,6 @@ book service
 book stack
 book storage area
 book title
-book)
 book-end
 book-knowledge
 book-learning
@@ -8264,7 +8261,6 @@ bootjack
 bootleg
 bootless
 bootlicker
-boots)
 bootstrap
 bootstrap loader
 bootstrapping
@@ -8339,7 +8335,6 @@ botanical
 botanical garden
 botanist
 botany
-botany)
 botch
 botcher
 botchy
@@ -8366,7 +8361,6 @@ bottle rack
 bottle scraper
 bottle washer
 bottle washing machine
-bottle)
 bottle-holder
 bottle-straw
 bottlebrush
@@ -8474,7 +8468,7 @@ bowstick
 bowstring
 box
 box (opera)
-box (shrub
+box (shrub, tree)
 box (small)
 box model
 box of bricks
@@ -8919,8 +8913,8 @@ bronchoscope
 bronchoscopy
 brontosaur
 bronze
-bronze age
 Bronze Age
+bronze age
 brooch
 brood
 brood cell
@@ -9075,8 +9069,8 @@ buffoon
 buffoonery
 Bug
 bug
-bug (software
 bug (software)
+bug (software, programming)
 bug fix
 bug report
 buggy
@@ -9173,7 +9167,7 @@ bummer
 bump
 bump into
 bumper
-bumper (in a bed
+bumper (in a bed, crib)
 bumpkin
 bumpy
 bun
@@ -9540,7 +9534,7 @@ cabbage
 cabbage white
 Cabbala
 cabin
-cabin (ship
+cabin (ship, etc.)
 cabinet
 cabinet (ministry)
 cabinet (room)
@@ -9795,8 +9789,8 @@ cancel character
 cancel signal
 cancelable fraction
 cancellation (postage)
-Cancer
 cancer
+Cancer
 candelabrum
 candid
 candidate
@@ -9879,8 +9873,8 @@ capacitance
 capacitor
 capacity
 capacity planning
-cape
 Cape
+cape
 Cape bunting
 Cape jewels
 Cape of Good Hope
@@ -9995,8 +9989,8 @@ cardboard
 cardia
 cardiac
 Cardiff
-cardigan
 Cardigan
+cardigan
 cardinal
 cardinal (number)
 cardinal point
@@ -10141,7 +10135,7 @@ case
 case (hardware)
 case (in court)
 case (Shift/Alt)
-case (upper
+case (upper, lower)
 case insensitive
 case list element
 case match
@@ -10553,8 +10547,8 @@ Ceylonese
 cf.
 cha-cha
 chacha
-chad
 Chad
+chad
 Chadian
 chador
 Chaeronea
@@ -10570,7 +10564,7 @@ chain link fence
 chain of mountains
 chain printer
 chain smoking
-chain stay (bicycle
+chain stay (bicycle, bike)
 chain store
 chain-guard
 chained
@@ -10673,7 +10667,7 @@ chapter
 chapter heading
 char set
 character
-character (in play
+character (in play, etc.)
 character class
 character code
 character code page
@@ -10896,8 +10890,8 @@ chewing gum
 chewing tobacco
 chi gong
 chi; Chios
-chic
 Chic
+chic
 Chicagan
 Chicago
 Chicagoan
@@ -11140,9 +11134,10 @@ chunk (torrent)
 chunk of wood
 church
 church (building); harrier
-church (institution
+church (institution, not building)
 church father
 church member
+church service
 Church Slavonic
 Church thesis
 church warden
@@ -11183,7 +11178,7 @@ cigarette smoke
 cigarette-end
 cigarillo
 cilia
-cinchona (bark
+cinchona (bark, tree)
 cinchonine
 cincinus
 cinder
@@ -11333,7 +11328,7 @@ class warfare
 classic
 classic view
 classical
-classical (composer
+classical (composer, author, etc.)
 classically
 classicalness
 classicism
@@ -11374,7 +11369,7 @@ clear box testing
 clear soup
 clear-thinking
 clearing (in a forest)
-clearing (in the woods
+clearing (in the woods, in a forest)
 clearly
 clearness
 cleat
@@ -11399,7 +11394,7 @@ clericalist
 clerihew
 clerk
 cleromancy
-Cleveland (city in Ohio
+Cleveland (city in Ohio, USA)
 clever
 clever person
 cleverly
@@ -11486,7 +11481,6 @@ clock rate
 clock signal
 clock speed
 clock tower
-clock)
 clockwise
 clod
 clod of earth
@@ -11518,7 +11512,7 @@ closely
 closet
 closing a circuit
 closing brace
-closing parenthesis
+closing parenthesis, “)”
 closing square bracket
 closure
 clot
@@ -11617,7 +11611,6 @@ coaster
 coat
 coat (animal)
 coat of arms
-coat with) jam
 coat-of-arms
 coati
 coatimundi
@@ -11665,8 +11658,8 @@ coconut pulp
 coconut water
 cocoon
 Cocos Islands
-COD
 cod
+COD
 coda
 code
 code access
@@ -11988,7 +11981,7 @@ comfortably
 comforter
 comfrey
 comic
-comic (strip
+comic (strip, book)
 comic opera
 comic strip
 comical
@@ -12168,7 +12161,7 @@ compacta
 compacting garbage collection
 compaction
 companion
-companion (on a trip
+companion (on a trip, journey)
 companion (traveling)
 companionless
 companionship
@@ -12208,7 +12201,7 @@ competency
 competent
 competent person
 competition
-competition (business
+competition (business, etc.)
 competitive
 competitively
 competitiveness
@@ -12888,7 +12881,6 @@ continuous document
 continuous feed
 continuous form(s)
 continuous stationery
-continuous)
 continuously
 contour
 contra-dance
@@ -12981,6 +12973,7 @@ conversation partner
 conversational
 conversational mode
 converse
+conversely
 conversion
 conversion rate
 conversion table
@@ -13052,8 +13045,8 @@ coot
 cop
 copal
 Copenhagen
-Copernicium
 copernicium
+Copernicium
 copied
 copier
 copies
@@ -13074,7 +13067,7 @@ Coptic
 copula
 copulation
 copy
-copy (of book
+copy (of book, etc.)
 copy program
 copy protection
 copy-editing
@@ -13252,7 +13245,7 @@ cotillion
 cotoneaster
 cottage
 cotton
-cotton (cloth
+cotton (cloth, fabric)
 cotton (raw)
 cotton cambric
 cotton field
@@ -13418,8 +13411,8 @@ cozy
 CPU
 CPU-intensive
 CPU-scheduler
-crab
 Crab
+crab
 crack
 crack (sound)
 crack-brained
@@ -13547,7 +13540,6 @@ crew (of a boat)
 crew member
 Crianlarich
 crib
-crib)
 cricket (insect)
 cricket (sport)
 crime
@@ -13596,6 +13588,7 @@ Croat (woman)
 Croatia
 Croatian
 Croatian (woman)
+crock
 crockery
 crockery set
 crocodile
@@ -13939,7 +13932,7 @@ cut (a connection)
 cut (as in cut and paste)
 cut (off)
 cut (out)
-cut (wound
+cut (wound, injury)
 cut into
 cut into four pieces
 cut off
@@ -14417,7 +14410,7 @@ deal
 deal with
 dealer
 dean
-dean (college
+dean (college, etc.)
 dear
 dear (person)
 Dear Sir
@@ -14988,7 +14981,6 @@ desire earnestly
 desired
 desist
 desk
-desk)
 deskband
 desktop
 desktop area
@@ -15283,7 +15275,7 @@ didactical
 didactically
 didactics
 die
-die (away
+die (away, off, out) fail
 die (cubical object)
 die from drowning
 die-hard
@@ -15686,13 +15678,13 @@ disk jockey
 disk jockey (DJ)
 disk mirroring
 disk quota
+disk slice
 disk space
 disk spanning
 disk stack
 disk storage
 disk tray
 disk unit
-disk)
 disk-based website
 disk-labeling
 disk-labeling system
@@ -16351,7 +16343,6 @@ drill sergeant
 drill-hole
 drink
 drink using one’s tongue
-drink)
 drinkable
 drinking
 drinking water
@@ -16381,7 +16372,6 @@ driveway
 driving axle
 driving mirror
 driving school
-driving)
 drizzle
 drizzling rain
 Drogheda
@@ -16411,8 +16401,8 @@ dropdown
 droplet
 dropsy
 drosky
-Drosophila
 drosophila
+Drosophila
 dross
 drought
 drove
@@ -16722,8 +16712,6 @@ e-newsletter
 e-shop
 e-zine
 e.g.
-e.g. Zener diode)
-e.g.)
 each
 each of the two celebrations after Ramadan
 each other
@@ -16810,6 +16798,7 @@ East Indian
 east of
 East Siberian Sea
 East Skeldt
+East Timor
 East Uvean
 East-Indian
 Easter
@@ -17207,7 +17196,6 @@ elevated place
 elevation
 elevator
 elevator shaft
-elevator)
 eleven
 eleventh
 elf
@@ -17598,8 +17586,8 @@ entangled hair
 enter
 enter (key)
 enter (on a keyboard)
-enter key
 Enter key
+enter key
 enter on the credit side
 enter someone’s head
 enteritis
@@ -17708,8 +17696,8 @@ ephod
 epic
 epic poem
 epicarp
-Epicure
 epicure
+Epicure
 epicurean
 Epicureanism
 Epicurism
@@ -17952,9 +17940,7 @@ estuary
 et al.
 et cetera
 eta
-etc)
 etc.
-etc.)
 etching
 eternal
 eternally
@@ -18070,8 +18056,8 @@ evangelizer
 evaporation
 evasion
 evasive
-Eve
 eve
+Eve
 even
 even (number)
 even (numbered)
@@ -18171,8 +18157,8 @@ evolutionist
 evolve
 evolvent
 evolvent of circle
-Ewe
 ewe
+Ewe
 ewe's cheese
 ewer
 ex libris
@@ -18296,7 +18282,6 @@ execution
 execution environment
 execution time
 executioner
-executions)
 executive
 executive committee
 executive power
@@ -18411,7 +18396,7 @@ expenses
 expensive
 expensively
 experience
-experience (general
+experience (general, continuous)
 experienced
 experiences
 experiment
@@ -18475,7 +18460,7 @@ exposure meter
 exposure scale
 exposure time
 express
-express (train
+express (train, messenger)
 express condolences
 express freight
 express train
@@ -18487,8 +18472,8 @@ expression of quantity
 expression of requirements
 expressionism
 Expressionism
-Expressionist
 expressionist
+Expressionist
 expressionistic
 expressive
 expressive means
@@ -18566,7 +18551,7 @@ extortionate
 extortionate interest
 extortionist
 extra
-extra (performer in a play
+extra (performer in a play, etc.)
 extra fee
 extract
 extraction
@@ -18633,7 +18618,6 @@ eyewitness
 fable
 fabric
 fabric softener
-fabric)
 fabrication
 fabulist
 fabulous
@@ -18685,7 +18669,7 @@ factotums
 factual
 facultative
 faculty
-faculty (university
+faculty (university, etc.)
 fad
 fade
 fade (out)
@@ -18828,7 +18812,7 @@ FAQ list
 far
 far (away) from
 far (from)
-far (off
+far (off, away)
 far away
 far away land
 far east
@@ -19731,7 +19715,6 @@ flattering
 flattery
 flaunt
 flavor
-flavor)
 flaw
 flawless
 flax
@@ -19754,6 +19737,7 @@ flesh-colored
 fleshy
 fleshy part
 flex
+flex (point)
 flexibility
 flexible
 flexibly
@@ -19770,8 +19754,8 @@ flighty
 flimflam
 fling
 fling off
-flint
 Flint
+flint
 flint-glass
 flip
 flip flop
@@ -19930,7 +19914,6 @@ folder
 folder hierarchy
 folder list
 folder tree
-folder)
 folders
 folders view
 folding
@@ -20022,7 +20005,7 @@ footway
 footwear
 fop
 for
-for (some
+for (some, an) unknown reason
 for a (little) while
 for a (short) time
 for a brief moment
@@ -20113,7 +20096,6 @@ for what purpose
 for what purposes
 for what reason
 for your part
-for)
 FOR-loop
 FOR-statement
 forage
@@ -21003,7 +20985,7 @@ gannet
 Gantt chart
 Ganymede
 gap
-gap (software
+gap (software, programming) bug
 garage
 garb
 garbage
@@ -21037,7 +21019,6 @@ garlic mustard
 garlicky
 garment
 garment bag
-garments)
 garnet
 garnet-colored
 garnish
@@ -21746,8 +21727,8 @@ gonorrhea
 Gonzales
 Gonzalez
 good
-good afternoon
 Good afternoon
+good afternoon
 good breeding
 good citizenship
 Good day!
@@ -21818,8 +21799,8 @@ gorilla-faced
 gorse
 goshawk
 gosling
-gospel
 Gospel
+gospel
 gospelo
 gossamer
 gossip
@@ -21831,8 +21812,8 @@ Gotama
 Göteborg
 Goth
 Gothenburg
-gothic
 Gothic
+gothic
 gothic style
 GOTO statement
 gouache
@@ -21857,8 +21838,8 @@ GPS
 grab
 grab hold of
 grabbing
-grace
 Grace
+grace
 grace (of God)
 grace period
 grace(fulness)
@@ -22175,7 +22156,7 @@ grimness
 Grimsby
 grin
 grind
-grind (rub
+grind (rub, polish) with emery
 grinding noise
 grinding of the teeth
 grip
@@ -22298,7 +22279,7 @@ Guaraní
 guarantee
 guarantee (of payment)
 guard
-guard (elite military corps
+guard (elite military corps, not sentry)
 guard dog
 guard relay
 guardedly
@@ -22311,8 +22292,8 @@ Guatemalans
 guava
 gubernatorial
 gudgeon
-Guelder rose
 guelder rose
+Guelder rose
 Guelderland
 Guelders
 guerilla
@@ -22358,8 +22339,9 @@ guiltily
 guiltless
 guiltware
 guilty
-guinea
+guilty feelings
 Guinea
+guinea
 guinea pig
 Guinea pig
 Guinea-Bissau
@@ -22598,8 +22580,8 @@ ham
 ham-fisted
 hamamelis
 Hamburg
-Hamburger
 hamburger
+Hamburger
 hamburger meat
 Hamilton
 Hamilton's problem
@@ -22607,8 +22589,8 @@ Hamilton’s problem
 Hamite
 Hamitic
 Hamitic languages
-Hamlet
 hamlet
+Hamlet
 hammer
 hammer (of a gun)
 hammer-on
@@ -22625,7 +22607,7 @@ Han (principle ethnic group of China)
 Hanafi (law)
 hand
 hand (of a clock)
-hand (watch
+hand (watch, clock)
 hand grenade
 hand in hand
 hand over
@@ -22694,12 +22676,11 @@ hang glider
 hang up
 hangar
 hanging
-hanging (as in
+hanging (as in, hanging things up)
 hanging figure
 hanging indent
 hanging lamp in church
 hanging quotation
-hanging things up)
 hangman
 hangover
 hank
@@ -23109,8 +23090,8 @@ heating
 heating oil
 heating stove
 heave ho
-Heaven
 heaven
+Heaven
 heavenly
 heavenly body
 heavenly sphere
@@ -23481,8 +23462,8 @@ high-speed
 high-temperature
 highbrow
 higher
-highlander
 Highlander
+highlander
 highlife
 highlight
 highlighter
@@ -23621,7 +23602,6 @@ hold with
 holder
 holder (in due course)
 holder of power
-holder)
 holding
 holding a bachelor’s degree
 holding attack
@@ -23768,7 +23748,6 @@ hooker
 hooks and eyes
 hookworm
 hooligan
-hooligans
 hoop
 hoop net
 hoopoe (bird)
@@ -24064,8 +24043,8 @@ hump
 humpback
 Humphrey
 humus
-hun
 Hun
+hun
 hunch one's back
 hunch-backed
 hunchback
@@ -24138,8 +24117,8 @@ hybrid disk
 hybrid hard disk
 hybrid integrated circuit
 hybrid sleep
-Hydra
 hydra
+Hydra
 hydrangea
 hydrant
 hydrate
@@ -24686,7 +24665,7 @@ imputation
 in
 in (and of) itself
 in (by) agreement
-in (his
+in (his, her, its) turn
 in (on) a place
 in (one’s) sleep
 in (the nick of) time
@@ -24702,7 +24681,6 @@ in a few days
 in a few words
 in a fitting way
 in a foreign way
-in a forest)
 in a friendly manner
 in a god-like manner
 in a group
@@ -24792,6 +24770,7 @@ in conformity
 in consequence of
 in contrast
 in contrast to
+in detail
 in different directions
 in different ways
 in distress
@@ -24827,7 +24806,7 @@ in groups
 in hand
 in heat
 in hiding
-in his (her
+in his (her, its) way
 in his heart
 in his language
 in his opinion
@@ -25518,7 +25497,7 @@ infrequently
 infringement
 infundibulum
 infusion
-infusion (of tea
+infusion (of tea, etc.)
 infusoria (small aquatic creatures)
 Inĝeniero
 ingenious
@@ -25587,7 +25566,6 @@ injured
 injured person
 injurious
 injury
-injury)
 injustice
 ink
 ink cartridge
@@ -25994,8 +25972,8 @@ International
 international access code
 international express
 international express train
-international labor organization
 International Labor Organization
+international labor organization
 international law
 International Monetary Fund
 international number format
@@ -26007,8 +25985,8 @@ internationalization
 internationally
 internaut
 internee
-internet
 Internet
+internet
 internet access
 Internet account
 internet address
@@ -26032,7 +26010,6 @@ internet service
 internet service provider
 internet site
 Internet synchronization
-internet)
 internet-access
 internment camp
 internship
@@ -26265,8 +26242,8 @@ Ireland
 Irene
 iridescent
 iridium
-iris
 Iris
+iris
 iris (anat.)
 iris (flower)
 Irish
@@ -26406,8 +26383,8 @@ it
 It bears repeating that
 It depends on whether
 it did nothing
-it doesn’t matter
 It doesn’t matter
+it doesn’t matter
 it follows then
 it hails
 it is incorrect to say
@@ -26429,7 +26406,7 @@ Italian language
 Italian Riviera
 Italian woman
 italic
-italic (font
+italic (font, writing)
 italicized
 Italy
 itch
@@ -26448,8 +26425,6 @@ Ithaca
 itinerant
 itinerary
 its
-its) turn
-its) way
 it’s a little know fact that
 it’s a matter of
 it’s a pity
@@ -26574,8 +26549,8 @@ Java virtual machine
 Javan
 Javanese
 Javanese woman
-JavaScript
 Javascript
+JavaScript
 javelin
 jaw
 jawbone
@@ -26742,7 +26717,6 @@ journaling file system
 journalism
 journalist
 journey
-journey)
 journeying
 journeyman
 Jove
@@ -26864,7 +26838,7 @@ kaj
 kaj aliaj
 kaj cetere
 kaj simile
-kaj tiel plu (etc.
+kaj tiel plu (etc., and so on)
 kakemono
 kala-azar
 kalanchoe
@@ -26983,7 +26957,7 @@ ketchup
 kettle
 kettledrum
 key
-key (piano
+key (piano, typewriter, etc.)
 key action
 key algorithm
 key benefit
@@ -27238,6 +27212,7 @@ known bug
 known issue
 koala
 Kobe (city in Japan)
+kobold
 kohlrabi
 Kola Peninsula
 kolkhoz
@@ -27917,8 +27892,8 @@ leprous
 lepton
 Lepus
 Lerwick
-Lesbian
 lesbian
+Lesbian
 lesbianism
 leslie (speaker)
 Lesotho
@@ -28456,7 +28431,7 @@ Liverpool
 livery
 livestock
 living
-living (thing
+living (thing, being)
 living according to nature
 living alone
 living arrangements
@@ -28580,7 +28555,7 @@ locust
 locust-tree
 lodestar
 lodge
-lodge (freemason
+lodge (freemason, etc.)
 lodge a complaint
 lodger
 lodgings
@@ -28710,6 +28685,7 @@ look out
 look out (man)
 look out!
 look up
+look-a-like
 look-and-feel
 lookalike
 looking for
@@ -28849,7 +28825,6 @@ lower course
 lower limit
 lower part
 lower part of the body
-lower)
 lower-case
 lowercase
 lowercasing
@@ -29227,6 +29202,7 @@ main diagonal
 main document
 main door
 main entrance
+main field of study
 main form
 main goal
 main idea
@@ -29263,12 +29239,13 @@ mainstream support
 maintain
 maintainer
 maintenance
-maintenance (grant
+maintenance (grant, allowance)
 maintenance contract
 maintenance task
 maintenance tool
 maintop
 Maithili
+maize
 majestic
 majestically
 majesty
@@ -29519,8 +29496,8 @@ Manchurian
 Manchurian bush-warbler
 Mancunian
 mandala
-Mandarin
 mandarin
+Mandarin
 Mandarin Chinese
 mandarin duck
 mandate
@@ -29587,6 +29564,7 @@ manometer
 manpower
 mansion
 manslaughter
+mantelpiece
 mantilla
 mantis
 mantissa
@@ -29620,7 +29598,6 @@ many things to do
 many times
 many years ago
 many years later
-many)
 many-colored
 many-sided
 many-to-many
@@ -29793,6 +29770,7 @@ masquerade dress
 mass
 mass (of people)
 mass accommodations
+mass communication
 mass e-mail
 mass edit mode
 mass email
@@ -29872,7 +29850,7 @@ maternal grandmother
 maternal grandparents
 maternal uncle
 maternity
-maternity ward (of a hospital
+maternity ward (of a hospital, e.g.)
 matgrass
 mathematical
 mathematical logic
@@ -29925,8 +29903,8 @@ maximally
 maximizing
 maximum
 Maxwell
-may
 May
+may
 may bug
 May I
 may lily
@@ -30282,7 +30260,6 @@ message type
 messaging
 messenger
 messenger pigeon
-messenger)
 Messenian
 messiah
 messianism
@@ -30292,8 +30269,8 @@ messy
 mestizo
 met
 meta file
-META key
 meta key
+META key
 meta language
 meta symbol
 meta tag
@@ -30454,14 +30431,15 @@ MIDI
 midland hawthorn
 midnight
 midnight mass
+midnight’s
 midshipman
 midsummer
 Midway Islands
 midwife
 midwife toad
 midyear
-mien
 Mien
+mien
 might
 mighty
 mignonette
@@ -30596,15 +30574,15 @@ minor interval
 minor mode
 minority
 minority (age)
-minority (especially racial
+minority (especially racial, religious, etc.)
 minority (person)
 minority opinion
 minority rights
-Minotaur
 minotaur
+Minotaur
 minstrel
 mint
-mint (plant
+mint (plant, flavor)
 mint-master
 minuend
 minuet
@@ -30809,8 +30787,8 @@ moisture
 mojito
 molar
 molasses
-Mold
 mold
+Mold
 Moldavia
 Moldavian
 molding
@@ -30871,7 +30849,6 @@ money order
 money plant
 money pocket
 money transfer forms
-money)
 money-changer
 money-grubber
 moneygrubber
@@ -31066,8 +31043,8 @@ mosaic
 mosaic floor
 mosaic work
 Moscow
-Moselle
 moselle
+Moselle
 Moses
 Moslem
 Mosotho (singular)
@@ -31193,7 +31170,7 @@ mountpoint
 mourn
 mourner
 mournful
-mourning (band
+mourning (band, garments)
 mourning (dress)
 mouse
 mouse button
@@ -31678,8 +31655,8 @@ Naples
 Napoleon
 Napoleonic
 narcissism
-narcissus
 Narcissus
+narcissus
 narco-analysis
 narcolepsy
 narcosis
@@ -31858,7 +31835,7 @@ need
 needed
 needful
 needle
-needle (compass
+needle (compass, phonograph)
 needless
 needlessly
 needlework
@@ -31890,8 +31867,8 @@ negotiable security
 negotiate
 negotiation
 negotiator
-negro
 Negro
+negro
 Nehemiah
 neigh
 neighbor
@@ -31906,8 +31883,8 @@ neither of us
 Nelson
 Nelson River
 nematode
-Nemesis
 nemesis
+Nemesis
 Nenagh
 neo-Latin
 Neo-Paganism
@@ -31964,7 +31941,7 @@ nesting of subroutines
 nesting place
 nestling
 net
-net (weight
+net (weight, etc.)
 net user
 net-connecting
 netball
@@ -32130,8 +32107,8 @@ newspapers
 newsreader
 newsticker
 newt
-newton
 Newton
+newton
 Newton's method
 Newtonabbey
 Newtonmore
@@ -32251,8 +32228,8 @@ nippers
 nipple
 nipple (artificial)
 nipplewort
-Nirvana
 nirvana
+Nirvana
 nit (of louse)
 nit-picker
 niter
@@ -32515,7 +32492,6 @@ Not at all!
 not be familiar with
 not be waiting for
 not beat around the bush
-not building)
 not content
 not easily
 not enough
@@ -32540,7 +32516,6 @@ not quite
 not reality
 not responsible
 not ripe
-not sentry)
 not stop at
 not useful
 not valid
@@ -32946,6 +32921,7 @@ Odysseys
 OECD
 Oedipus
 Oedipus complex
+OEM
 OEM license
 of
 of ... to
@@ -33132,7 +33108,6 @@ of which
 of yesterday
 of your country
 of Zamenhof
-off
 off line
 off rhyme
 off the harbor
@@ -33428,7 +33403,6 @@ on top of
 on very rare occasions
 on Wednesdays
 on(ward)
-on)
 on-line
 on-line store
 on-screen keyboard
@@ -33465,7 +33439,7 @@ one hundredth of a baht
 one moment or another
 one more
 one more time
-One more? (drink
+One more? (drink, etc.)
 one must
 one night
 one only
@@ -33525,11 +33499,12 @@ oneness
 onerous
 one’s
 one’s own
+one’s self
 onion
 online
 online (computer)
-online (on the web
 online (on the web)
+online (on the web, internet)
 online dictionary
 online friend
 online help system
@@ -33715,8 +33690,8 @@ optional section
 options
 opulence
 opus
-OR
 or
+OR
 or rather
 orache
 oracle
@@ -33750,7 +33725,7 @@ ordain
 ordeal
 order
 order (for goods)
-order (postal
+order (postal, money)
 order a fresh supply of
 order entry
 order form
@@ -33780,7 +33755,7 @@ ordinate
 ordination
 ordnance
 ore
-öre (Swedish unit of current
+öre (Swedish unit of current, 1/100 of a krona)
 oregano
 Oregon
 organ
@@ -33915,8 +33890,8 @@ otorhinolaryngology
 ottavino
 otter
 Otterburn
-ottoman
 Ottoman
+ottoman
 Ottomans
 oubliette
 ouch
@@ -33949,7 +33924,6 @@ out of the way
 out of tune
 out of wedlock
 out of work
-out) fail
 out-degree
 out-of-date
 out-of-the-box
@@ -34042,7 +34016,6 @@ over the next few days
 over the radio
 over there
 over time
-over)
 overabundance
 overabundant
 overall
@@ -34163,8 +34136,8 @@ PA
 pa
 pace
 pachyderm
-Pacific
 pacific
+Pacific
 Pacific Ocean
 pacific saury
 pacification
@@ -34206,7 +34179,7 @@ pagan
 paganism
 Paganism (contemporary)
 page
-page (book
+page (book, etc.)
 page (person)
 page banner
 page border
@@ -34727,8 +34700,8 @@ patching
 patchouli
 patchwork
 patchy
-pâté
 pate
+pâté
 patella
 patent
 patentee
@@ -34864,7 +34837,7 @@ peach
 peach tree
 peacock
 peak
-peak (of cap
+peak (of cap, etc.)
 peak memory usage
 peal
 peal (of bells)
@@ -35214,7 +35187,6 @@ person vanquished
 person who likes to run
 person who shines shoes
 person with sharp vision
-person)
 personage
 personal
 personal capital
@@ -35413,7 +35385,6 @@ phonetic alphabet
 phonetically
 phonetics
 phonograph
-phonograph)
 phonologist
 phonology
 phonometer
@@ -35542,7 +35513,6 @@ picture rail
 picture viewer
 picture wrapping
 picture writing
-picture)
 picture-in-picture
 picturesque
 picturesquely
@@ -35595,7 +35565,7 @@ pig
 pig iron
 pigeon
 pigeon house
-pigeon-hole (for papers
+pigeon-hole (for papers, etc.)
 pigeonholes
 piggish
 piggy bank
@@ -35856,7 +35826,6 @@ play
 play a concert
 play about
 play an encore
-play)
 play-off
 playback
 player
@@ -36026,7 +35995,7 @@ pogrom
 poignancy
 poignant
 point
-point (cards
+point (cards, score)
 point at
 point of contact
 point of land
@@ -36077,8 +36046,8 @@ polarized
 polarizer (optical device)
 polarizing
 polder
-pole
 Pole
+pole
 pole (geography)
 pole-axe
 polecat
@@ -36097,15 +36066,14 @@ policy
 policyholder
 polio
 poliomyelitis
-Polish
 polish
+Polish
 polish (substance)
 Polish person
 Polish plait
 Polish provincial governor
 polish smooth
 Polish woman
-polish) with emery
 polished
 polishing wax
 polite
@@ -36271,7 +36239,7 @@ popularization
 popularly
 populate
 population
-population (e.g. statistical
+population (e.g. statistical, biological, etc.)
 populism
 populist
 populous
@@ -36414,8 +36382,8 @@ postpone
 postposition
 postprocessing
 postprocessor
-postscript
 PostScript
+postscript
 posttagmeze
 postulate
 posture
@@ -37092,8 +37060,6 @@ programming
 programming environment
 programming language
 programming system
-programming)
-programming) bug
 progress
 progress bar
 progress indicator
@@ -37358,9 +37324,10 @@ pruning-knife
 Prussia
 Prussian
 Prussian blue
-Prussic acid
 prussic acid
+Prussic acid
 pry
+PS
 psalm
 psalm-book
 psalmist
@@ -37526,7 +37493,7 @@ pulmonary
 pulmonic person
 pulp
 pulpit
-pulque (milky
+pulque (milky, somewhat viscous alcoholic beverage)
 pulsar
 pulsate
 pulsating
@@ -37712,8 +37679,8 @@ Pythagorean theorem
 Pythagorean triangle
 Pythagorean triple
 Pythagoreanism
-python
 Python
+python
 python molure
 Pytlochry
 pyx
@@ -38105,8 +38072,8 @@ rake
 rake (implement)
 rally
 rallying cry; draft on foreign bank
-ram
 RAM
+ram
 RAM disk
 Ramadan
 Ramayana
@@ -38133,7 +38100,7 @@ random-access machine
 random-access memory
 randomization
 range
-range (shooting
+range (shooting, driving)
 range check
 range error
 range name
@@ -38251,6 +38218,7 @@ razor blade
 razor-blade
 razorbill
 Re
+re-
 re-education
 re-examination
 reach
@@ -38396,7 +38364,7 @@ recent changes
 recent retirement
 recently
 reception
-reception (area
+reception (area, desk)
 reception room
 receptionist
 receptive
@@ -38440,7 +38408,7 @@ recognized
 recognized text
 recognizer
 recoil
-recoil (of a gun
+recoil (of a gun, e.g.)
 recollect
 recollection
 recommend
@@ -38505,7 +38473,7 @@ rectorship
 rectory
 rectum
 recumbent
-recumbent (bicycle
+recumbent (bicycle, bike)
 recuperate
 recurrence
 recurrence pattern
@@ -38546,6 +38514,7 @@ red squirrel
 red tape
 red(-skinned) man
 red-bearded person
+Red-Green-Blue
 red-handed
 red-headed bunting
 redaction
@@ -38637,7 +38606,7 @@ refiner
 refinery
 refining (metallurgy)
 reflect
-reflect (light
+reflect (light, sound)
 reflect on
 reflected
 reflected image
@@ -38957,8 +38926,8 @@ removed
 remunerate
 remuneration
 remunerative
-renaissance
 Renaissance
+renaissance
 renal
 rename
 renationalization
@@ -39053,7 +39022,7 @@ reply coupon
 reply in the affirmative
 replying
 report
-report (of gun
+report (of gun, etc.)
 report (official)
 report database
 report footer
@@ -39206,7 +39175,6 @@ resource exhaustion detector
 resource exhaustion resolver
 resource file
 resource record
-resource)
 resourceful
 resourcefully
 resourcefulness
@@ -39351,8 +39319,8 @@ return value
 return-ticket
 returning
 reunification
-Reunion
 reunion
+Reunion
 reusable
 reusable paper
 reusable source code
@@ -39642,7 +39610,6 @@ ritualistic
 rival
 rivalry
 river
-River)
 river-bed
 riverbank
 Riverdale
@@ -39662,7 +39629,6 @@ road sign
 road system
 Road Town
 road work
-road)
 roadie
 roadmap
 roadside ditch
@@ -39750,7 +39716,7 @@ roleplay
 roll
 roll (book)
 roll (of drum)
-roll (of material
+roll (of material, etc.)
 roll aside
 roll away
 roll back
@@ -39773,8 +39739,8 @@ rolling pin
 rolling-stock
 rollover
 ROM
-Roman
 roman
+Roman
 Roman Catholic
 Roman Catholicism
 Roman Empire
@@ -39784,7 +39750,7 @@ Roman numerals
 Roman ruins
 roman type family
 Romance
-romance (music
+romance (music, song)
 Romance language
 Romanche
 Romanesque
@@ -40180,6 +40146,7 @@ Saint Lucia
 Saint Nicholas
 Saint Petersburg
 Saint Valentine's Day
+Saint Vitus’s dance
 saintliness
 saintly
 saint’s day
@@ -40360,6 +40327,7 @@ sarira
 sarong
 SARS
 sarsaparilla
+sash
 sashimi
 Sasquatch
 sassafras
@@ -40453,13 +40421,14 @@ say no
 say yes
 saying
 saying from the Bible
+saying goodbye
 scab
 scabbard
 scabby
 scabious
 scaffold
 scaffold (for building)
-scaffold (for hangings
+scaffold (for hangings, executions)
 scaffolding
 scalability
 scalable
@@ -40470,7 +40439,7 @@ scalar potential
 scalar product
 scalding wound
 scale
-scale (map
+scale (map, measure, etc.)
 scale (of fish)
 scale down
 scale factor
@@ -40573,7 +40542,7 @@ scholarship
 scholastic
 scholasticism
 school
-school (of art
+school (of art, philosophy, thought, etc)
 school desk
 school holidays
 school of music
@@ -40619,7 +40588,6 @@ scorbutic
 scorch
 score
 score (musical)
-score)
 scoreboard
 scorecard
 scorn
@@ -41404,7 +41372,6 @@ sestertius
 set
 set a date
 set a trap (for)
-set a) date
 set again
 set apart
 set aside
@@ -41534,7 +41501,7 @@ shadowy
 shady
 shady retreat
 shaft
-shaft (mine
+shaft (mine, elevator)
 shaft (of vehicle)
 shag
 shaggy
@@ -41589,7 +41556,7 @@ shapeless
 shapely
 share
 share (finance)
-share (knowledge
+share (knowledge, picture)
 share capital
 share name
 share path
@@ -41597,7 +41564,7 @@ share profits
 share ratio
 share to bearer
 shared
-shared (file
+shared (file, folder)
 shared (folder)
 shared borders
 shared computer
@@ -41617,13 +41584,13 @@ shareholdership
 sharer
 shares
 shareware
-Sharia
 sharia
+Sharia
 Shariah
 sharif
 sharing
 sharing (folder)
-sharing (of a folder
+sharing (of a folder, resource)
 sharing mode
 sharing program
 sharing tool
@@ -41948,8 +41915,8 @@ shut
 shut (down)
 shut once more
 shut up
-shut up!
 Shut up!
+shut up!
 shut your trap!
 Shut your trap!
 shutdown
@@ -42671,7 +42638,7 @@ smooth scroll
 smoothen
 smoothing
 smoothly
-smoothly (of a path
+smoothly (of a path, road)
 smother
 SMS
 SMS message
@@ -42896,7 +42863,7 @@ soldiers’ quarters
 sole
 sole (fish)
 sole (foot)
-sole (of boot
+sole (of boot, etc)
 sole (shoe)
 sole agency
 sole agent
@@ -43011,7 +42978,6 @@ something unimportant
 something which everyone can use
 something worth knowing
 something worthless
-something)
 sometime
 sometime later
 sometimes
@@ -43020,7 +42986,6 @@ somewhat
 somewhat black
 somewhat similar
 somewhat special
-somewhat viscous alcoholic beverage)
 somewhere
 somewhere nearby
 son
@@ -43035,7 +43000,6 @@ song
 song of glory
 Song of Solomon
 Song of Songs
-song)
 Songai
 songbird
 songbook
@@ -43120,7 +43084,6 @@ sound system
 sound technician
 Sound technology
 sound the alarm
-sound)
 sounder
 soundhole
 soundless
@@ -44095,7 +44058,7 @@ stew pan
 stew-pan
 steward
 steward (of ship)
-steward (ship
+steward (ship, plane, etc.)
 stewardess
 stewardship
 Stewart Island
@@ -44205,8 +44168,8 @@ stomach
 stomach ache
 stone
 stone (of fruit)
-stone age
 Stone Age
+stone age
 stone blackberry
 stone bramble
 stone cottage
@@ -44283,7 +44246,7 @@ storming
 stormy
 Stornoway
 story
-story (of a novel
+story (of a novel, play)
 story (untruth)
 storyboard
 storyteller
@@ -44447,7 +44410,7 @@ stringent
 stringently
 strings
 strip
-strip (someone
+strip (someone, something)
 strip of bacon
 stripe
 striped
@@ -44455,6 +44418,7 @@ striped snake-head fish
 striptease
 strive for
 striving
+strobilus
 stroboscope
 stroboscopic
 stroke
@@ -44515,7 +44479,7 @@ student of German Studies
 student or practitioner of wushu
 student years
 studio
-studio (TV
+studio (TV, etc.)
 studious
 studs
 study
@@ -45711,8 +45675,8 @@ tarsier
 tarsus
 tart
 tartan
-tartar
 Tartar
+tartar
 Tartary
 tartly
 tartness
@@ -46194,8 +46158,8 @@ thankless
 thankless job
 thanks
 thanks to
-thanksgiving
 Thanksgiving
+thanksgiving
 Thanksgiving Day
 that
 that (one)
@@ -46328,7 +46292,7 @@ the pictures
 the poor
 the power of suggestion
 the present (as opposed to the past or future)
-the present (day
+the present (day, time)
 the present day
 the proletariat
 the question is
@@ -46442,7 +46406,7 @@ thermodynamics
 thermoelectric
 thermometer
 thermos
-thermos (flask
+thermos (flask, bottle)
 thermos bottle
 thermostat
 thermostating
@@ -46797,7 +46761,6 @@ time tracking
 time unit
 time value
 time zone
-time)
 time-consuming
 time-out
 time-out (version)
@@ -46894,7 +46857,7 @@ titrate
 titre
 titter
 to
-to (assign
+to (assign, set a) date
 to (be in) accord
 to (be in) labor
 to (begin to) burn
@@ -46905,7 +46868,7 @@ to (catch) fish
 to (cause to be) complete
 to (cause to be) dry
 to (continue to) observe
-to (cover
+to (cover, coat with) jam
 to (de)bone
 to (do) battle
 to (draw into a) thread
@@ -47047,7 +47010,7 @@ to add up the figures
 to addict
 to addle
 to address
-to address (a letter
+to address (a letter, person)
 to adduct
 to adhere
 to adhere to
@@ -47108,7 +47071,7 @@ to agree to
 to agree with
 to ail
 to aim
-to aim (at
+to aim (at, for)
 to air
 to air-condition
 to airbrush
@@ -47151,7 +47114,7 @@ to amble
 to ambush
 to ameliorate
 to amend
-to amend (resolution
+to amend (resolution, etc.)
 to Americanize
 to ammoniate
 to amnesty
@@ -47618,7 +47581,7 @@ to be in line with
 to be in opposition
 to be in suspension
 to be incandescent
-to be inclined (to do something
+to be inclined (to do something, toward something)
 to be inclined to
 to be included
 to be indignant
@@ -48077,7 +48040,7 @@ to blow in
 to blow off
 to blow off steam
 to blow one’s nose
-to blow out (a light
+to blow out (a light, etc.)
 to blow over
 to blow smoke rings
 to blow up
@@ -48199,7 +48162,7 @@ to bring to someone’s attention
 to bring to subjection
 to bring up
 to bring with it
-to bristle (hair
+to bristle (hair, etc.)
 to broach
 to broadcast
 to broadcast on TV
@@ -48300,7 +48263,7 @@ to camp
 to camp (in a tent)
 to camp out
 to campaign
-to can (food
+to can (food, etc.)
 to canalize
 to cancel
 to cancel an order
@@ -48332,7 +48295,7 @@ to cascade (arrange)
 to case
 to cash
 to cast
-to cast (skin
+to cast (skin, etc)
 to cast a glance
 to cast a shadow
 to cast aspersions to
@@ -48465,13 +48428,13 @@ to clasp the hands
 to classify
 to clatter
 to clean
-to clean (remove dirt
+to clean (remove dirt, mud, etc.)
 to clean (up)
 to clear
 to clear cache
 to clear one's throat
 to clear one’s voice
-to clear the table (of eating utensils
+to clear the table (of eating utensils, etc.)
 to cleave
 to clench
 to click
@@ -49174,7 +49137,7 @@ to dramatize
 to drape
 to draught
 to draw
-to draw (from a sheath
+to draw (from a sheath, holder)
 to draw (water)
 to draw a sword
 to draw after
@@ -49207,7 +49170,7 @@ to drink up
 to drip
 to drip (water)
 to drive
-to drive (a car
+to drive (a car, automobile)
 to drive (a vehicle)
 to drive around
 to drive away
@@ -49922,6 +49885,7 @@ to hang (execute)
 to hang onto
 to hang out
 to hang up (telephone)
+to hang, be suspended)
 to harangue
 to harass
 to harbor
@@ -50325,7 +50289,7 @@ to lament
 to laminate
 to lampoon
 to land
-to land (an airplane
+to land (an airplane, etc.)
 to languish
 to lap
 to lap (up)
@@ -51191,7 +51155,7 @@ to purr
 to pursue
 to push
 to push (onto a stack)
-to push (toward
+to push (toward, on)
 to push along
 to push aside
 to push forward
@@ -51458,7 +51422,7 @@ to reside
 to resign
 to resist
 to resize
-to resole (shoes
+to resole (shoes, boots)
 to resonance
 to resound
 to respect
@@ -51611,7 +51575,7 @@ to say the least
 to say “ci”
 to scald
 to scale
-to scale (walls
+to scale (walls, etc.)
 to scalp
 to scan
 to scan (electronically)
@@ -51731,7 +51695,7 @@ to sharpen
 to sharpen (to a point)
 to shatter
 to shave
-to sheath (a sword
+to sheath (a sword, e.g.)
 to shell
 to shelter oneself
 to shield
@@ -51859,7 +51823,7 @@ to smell something coming
 to smelt
 to smile
 to smoke
-to smoke (fish
+to smoke (fish, etc)
 to smoke in public
 to smooth
 to smuggle
@@ -51945,7 +51909,7 @@ to split hairs
 to split off
 to split the atom
 to spoil
-to sponge (down
+to sponge (down, over)
 to sponsor
 to spool
 to spoon out
@@ -52251,7 +52215,7 @@ to tape
 to taper
 to tar
 to taste
-to taste (food
+to taste (food, drink)
 to tattoo
 to taw
 to tax repeatedly
@@ -52420,7 +52384,7 @@ to tumble
 to tune
 to tunnel
 to turn
-to turn (back
+to turn (back, around)
 to turn (on a lathe)
 to turn back
 to turn into vinegar
@@ -52740,7 +52704,7 @@ toddler bubo brat
 toe
 toe loop
 toe-clip
-toeclip (bicycle
+toeclip (bicycle, bike)
 toenail
 toffee
 tofu
@@ -52845,7 +52809,7 @@ tonsure
 tontine
 tonus
 too
-too (much
+too (much, many)
 too many cooks spoil the broth
 too much
 tool
@@ -53003,7 +52967,6 @@ tousle
 tow
 tow truck
 toward
-toward something)
 toward(s)
 towards
 towards heaven
@@ -53322,7 +53285,6 @@ tree stump
 tree traversal
 tree trunk
 tree walking
-tree)
 tree-creeper
 tree-cutter
 tree-nurseryman
@@ -53425,8 +53387,8 @@ trimonoecious
 Trinidad
 Trinidadian
 Trinitarian
-Trinity
 trinity
+Trinity
 trinity (of gods)
 Trinity Alps
 Trinity Sunday
@@ -53476,7 +53438,7 @@ trollop
 trombone
 tromometer
 troop
-troop (of thugs
+troop (of thugs, hooligans, etc.)
 trooper
 tropaeolin
 trope
@@ -53526,8 +53488,8 @@ true
 true owls
 true rhyme
 TrueType
-truetype font
 TrueType font
+truetype font
 truffle
 Trukese
 truly
@@ -53643,8 +53605,8 @@ Turin
 Turing machine
 Turk
 Turkestan
-turkey
 Turkey
+turkey
 Turkic
 Turkic language
 Turkic person
@@ -53760,8 +53722,8 @@ twister
 twisting
 twisty
 twitch
-Twitter
 twitter
+Twitter
 twitter feed
 two
 two hundred
@@ -53805,6 +53767,7 @@ type of homemade beer
 type of money
 type of popular South African music
 type sign
+type-like
 typed item
 typed language
 typeface
@@ -54694,7 +54657,7 @@ upward
 upward compatible
 upwards
 Ural
-Ural (Mountains
+Ural (Mountains, River)
 Ural-Altaic group
 Uralic language
 Uranian
@@ -54734,7 +54697,6 @@ Uruguayan
 Uruguayan woman
 urus
 USA
-USA)
 usability
 usability design
 usage
@@ -54848,8 +54810,8 @@ utility programs
 utilize
 utmost
 Utopia
-utopian
 Utopian
+utopian
 utopism
 utopist
 Utrecht
@@ -54934,8 +54896,8 @@ vampire
 van
 van (military)
 vanadium
-Vandal
 vandal
+Vandal
 vandalism
 vane
 vanguard
@@ -54991,8 +54953,8 @@ vassalage
 vast
 vastness
 vastness of the sea
-VAT
 vat
+VAT
 vat; tuna
 Vatican
 Vatican City
@@ -55081,6 +55043,7 @@ vent hole
 ventilate
 ventilation
 ventilation hole
+ventilator
 ventricle
 ventriloquist
 venture
@@ -55264,8 +55227,8 @@ vicissitude
 victim
 victimization
 victimize
-Victor
 victor
+Victor
 victorious
 victory
 Victory Mansions
@@ -55739,6 +55702,7 @@ wanderlust
 wane
 waning moon
 want
+want ad
 want greatly
 want of civilization
 want to have
@@ -55935,8 +55899,8 @@ watertight
 waterway
 waterweed
 watery
-Watt
 watt
+Watt
 watt-hour
 wattage
 wattle
@@ -56025,8 +55989,8 @@ weaver
 weaver-bird
 weavers (birds)
 weaving
-web
 Web
+web
 web address
 web app
 web application
@@ -56174,8 +56138,8 @@ wench
 werewolf
 Weser
 Wesleyan
-West
 west
+West
 West Australia
 West Bank
 West European
@@ -56279,6 +56243,7 @@ when all is said and done
 when dawn came
 when necessary
 when needed
+when one was
 when possible
 when really need
 when the job is done
@@ -56394,7 +56359,6 @@ white space
 white substance
 White Volta
 white water-lily
-white) sturgeon
 white-backed woodpecker
 white-collar
 white-crowned sparrow
@@ -56456,8 +56420,8 @@ whose
 whosoever
 why
 Wi-Fi
-wick
 Wick
+wick
 wicked
 wickedly
 wickedness
@@ -56490,8 +56454,8 @@ wife
 wife killer
 wife murderer
 wifely
-WiFi
 wifi
+WiFi
 wig
 wigeon
 wigwam
@@ -56537,6 +56501,7 @@ willing
 willingly
 willingness
 willow
+willow ptarmigan
 willow-warbler
 willowherb
 willowy
@@ -56560,7 +56525,7 @@ wind gauge
 wind instrument
 wind off
 wind up
-wind up (watch
+wind up (watch, clock)
 wind-blown
 wind-sock
 windbag
@@ -56622,7 +56587,7 @@ wine steward
 wine taster
 wine tasting
 wing
-wing (of a car
+wing (of a car, building, screw, etc.)
 wing-case
 wing-nut
 winged
@@ -56886,7 +56851,6 @@ wombat
 women’s page
 won (unit of currency)
 wonder
-wonder)
 wonderful
 wonderfully
 Wonderland
@@ -57071,6 +57035,7 @@ worldly
 worldly life
 worldview
 worldwide
+worldwide web
 worm
 worm-eaten
 worm-ridden
@@ -57085,6 +57050,7 @@ worryingly
 worse
 worsening
 worship
+worship service
 worshiper
 worst
 worsted
@@ -57122,7 +57088,7 @@ would like
 wound
 wounded
 woundwort
-wow (expression of admiration
+wow (expression of admiration, wonder)
 wrack
 wrack; shingles (disease)
 wrangle
@@ -57132,7 +57098,8 @@ wrap off
 wrap text
 wrap up
 wrapper
-wrapper (for mailing
+wrapper (for mailing, etc.)
+wrapping
 wrapping behavior
 wrapping paper
 wrath
@@ -57197,7 +57164,6 @@ writing paper
 writing room
 writing system
 writing table
-writing)
 written
 written Chinese character
 written consent
@@ -57540,7 +57506,7 @@ Zen Buddhist
 zenana
 Zend
 Zend-Avesta
-Zener (American physicist
+Zener (American physicist, e.g. Zener diode)
 zenith
 zenithal
 zenithal distance
@@ -57610,8 +57576,8 @@ Zion
 Zionism
 Zionist
 zip
-zip code
 ZIP code
+zip code
 zip fastener
 zip-drive
 zipper
@@ -57717,7 +57683,6 @@ Zyrian
 υ
 ‘rag’ (publication)
 “(”
-“)”
 “[”
 “]”
 “Dear John” letter

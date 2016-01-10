@@ -11,8 +11,8 @@ en_to_eos = Hash.new([])
 for line in lines
   eo, str = line.split(" : ").map(&:strip)
   if str
-    ens = str =~ /^\(/ ? [str] : str.split(', ')
-    eo_to_ens[eo] = ens.map(&:strip)
+    ens = str.split(/,(?![^(]*\))/).map(&:strip).reject(&:empty?)
+    eo_to_ens[eo] = ens
     for en in ens
       en_to_eos[en] = en_to_eos[en] + [eo]
     end
